@@ -29,13 +29,13 @@ corpseRemovalMaxTime = 9999;
 #include "Config_Master.hpp"
 
 class RscTitles {
-	#include "dialog\progress.hpp"
-	#include "dialog\hud_nameTags.hpp"
-	#include "dialog\hud_stats.hpp"
+#include "dialog\progress.hpp"
+#include "dialog\hud_nameTags.hpp"
+#include "dialog\hud_stats.hpp"
 };
 
 class CfgFunctions {
-	#include "Functions.hpp"
+#include "Functions.hpp"
 };
 
 class CfgSounds
@@ -84,7 +84,7 @@ class CfgDebriefing
 
 	class Blacklisted
 	{
-		title = "Mission Failed";
+		title = "너 블랙! 카페에 반성문써봐 풀어줌... ";
 		subtitle = "You are blacklisted from cops";
 		description = "You are not allowed to be a cop due to previous actions and the admins have removed you from being a cop.";
 		pictureBackground = "";
