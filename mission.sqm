@@ -11088,7 +11088,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=224;
+		items=225;
 		class Item0
 		{
 			position[]={8459.6777,104.56568,25131.203};
@@ -11386,7 +11386,7 @@ class Mission
 		};
 		class Item39
 		{
-			position[]={3647.2981,10.22145,13122.749};
+			position[]={3643.458,10.179443,13121.981};
 			name="civ_car_1";
 			type="Empty";
 			angle=222.94595;
@@ -12867,6 +12867,13 @@ class Mission
 			fillName="Grid";
 			a=200;
 			b=200;
+		};
+		class Item224
+		{
+			position[]={3651.5176,10.260834,13121.176};
+			name="civ_car_1_1";
+			type="Empty";
+			angle=208.40829;
 		};
 	};
 };
