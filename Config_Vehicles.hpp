@@ -87,14 +87,14 @@ class CarShops {
 				{ "C_SUV_01_F", 45000, { "" }, { "", "", -1 } },
 				{ "C_Hatchback_01_sport_F", 50000, { "" }, { "life_coplevel", "SCALAR", 1 } },
 				{ "B_MRAP_01_F", 30000, { "" }, { "life_coplevel", "SCALAR", 1 } },
+				{ "B_MRAP_01_hmg_F", 450000, { "" }, { "life_coplevel", "SCALAR", 2 } },
 				{ "O_MRAP_02_F", 150000, { "" }, { "life_coplevel", "SCALAR", 1 } },
-				{ "I_MRAP_03_hmg_F", 750000, { "" }, { "life_coplevel", "SCALAR", 1 } },
-				{ "B_MRAP_01_hmg_F", 750000, { "" }, { "life_coplevel", "SCALAR", 2 } },
-				{ "B_Truck_01_Repair_F", 750000, { "" }, { "life_coplevel", "SCALAR", 2 } },
-				{ "O_MRAP_02_hmg_F", 750000, { "" }, { "life_coplevel", "SCALAR", 2 } },
-				{ "O_Truck_02_medical_F", 750000, { "" }, { "life_coplevel", "SCALAR", 2 } },
-				{ "O_MBT_02_cannon_F", 750000, { "" }, { "life_coplevel", "SCALAR", 3 } },
-				{ "B_Truck_01_ammo_F", 750000, { "" }, { "life_coplevel", "SCALAR", 1 } }
+				{ "O_MRAP_02_hmg_F", 550000, { "" }, { "life_coplevel", "SCALAR", 2 } },
+				{ "I_MRAP_03_hmg_F", 650000, { "" }, { "life_coplevel", "SCALAR", 1 } },
+				{ "B_Truck_01_Repair_F", 250000, { "" }, { "life_coplevel", "SCALAR", 2 } },
+				{ "O_Truck_02_medical_F", 250000, { "" }, { "life_coplevel", "SCALAR", 2 } },
+				{ "O_MBT_02_cannon_F", 1950000, { "" }, { "life_coplevel", "SCALAR", 3 } },
+				{ "B_Truck_01_ammo_F", 150000, { "" }, { "life_coplevel", "SCALAR", 1 } }
 		};
 	};
 
@@ -264,7 +264,11 @@ class LifeCfgVehicles {
 						"#(argb,8,8,3)color(0.05,0.05,0.05,1)",
 						"#(argb,8,8,3)color(0.05,0.05,0.05,1)",
 						"#(argb,8,8,3)color(0.05,0.05,0.05,1)"
-				} }
+				} },
+
+				{ "Police", "cop", {"textures\cop\cop_hunter.jpg","textures\cop\swat_hunter_2.jpg"} },
+				{ "Swat", "cop", {"textures\cop\swat_hunter.jpg","textures\cop\swat_hunter_2.jpg"} },
+				{ "Sniper", "cop", {"textures\cop\cop_hunterSniper.jpg","textures\cop\swat_hunter_2.jpg"} }
 		};
 	};
 
@@ -440,7 +444,9 @@ class LifeCfgVehicles {
 		chopShop = 95000;
 		textures[] = {
 				{ "Blackmatte", "reb", {"textures\rebel\blackmatte.jpg", "textures\rebel\blackmatte.jpg"} },
-				{ "Camo", "reb", {"textures\rebel\reblbirdcamo1.jpg", "textures\rebel\reblbirdcamo1.jpg"} }
+				{ "Camo", "reb", {"textures\rebel\reblbirdcamo1.jpg", "textures\rebel\reblbirdcamo1.jpg"} },
+				{ "Black", "cop", {"textures\rebel\blackmatte.jpg", "textures\rebel\blackmatte.jpg"} },
+				{ "CamoCop", "cop", {"textures\rebel\reblbirdcamo1.jpg", "textures\rebel\reblbirdcamo1.jpg"} }
 		};
 	};
 
@@ -460,7 +466,10 @@ class LifeCfgVehicles {
 		garageSell[] = { 65000, 0, 0, 0 };
 		insurance = 2500;
 		chopShop = 75000;
-		textures[] = { };
+		textures[] = {
+				{ "Black", "cop", {"textures\rebel\blackmatte.jpg", "textures\rebel\blackmatte.jpg"} },
+				{ "CamoCop", "cop", {"textures\rebel\reblbirdcamo1.jpg", "textures\rebel\reblbirdcamo1.jpg"} }
+		};
 	};
 
 	class O_Truck_02_medical_F {

@@ -213,7 +213,7 @@ class VirtualItems {
 		displayName = "STR_Item_GoldBar";
 		weight = 12;
 		buyPrice = -1;
-		sellPrice = 95000;
+		sellPrice = 85000;
 		illegal = false;
 		edible = -1;
 		icon = "icons\ico_goldbar.paa";
@@ -233,9 +233,9 @@ class VirtualItems {
 	class boltcutter {
 		variable = "boltCutter";
 		displayName = "STR_Item_BCutter";
-		weight = 5;
-		buyPrice = 7500;
-		sellPrice = 1000;
+		weight = 7;
+		buyPrice = 125500;
+		sellPrice = 71000;
 		illegal = true;
 		edible = -1;
 		icon = "icons\ico_boltcutters.paa";

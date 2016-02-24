@@ -5693,6 +5693,18 @@
       <Portuguese>Hospital</Portuguese>
       <Polish>Szpital</Polish>
     </Key>
+    <Key ID="STR_MAR_Shoot_Test">
+      <Original>ShootingGround</Original>
+      <German>ShootingGround</German>
+      <Portuguese>ShootingGround</Portuguese>
+      <Polish>ShootingGround</Polish>
+    </Key>
+    <Key ID="STR_MAR_Pk_Zone">
+      <Original>PVP PK Zone</Original>
+      <German>PVP PK Zone</German>
+      <Portuguese>PVP PK Zone</Portuguese>
+      <Polish>PVP PK Zone</Polish>
+    </Key>
     <Key ID="STR_MAR_Police_Station">
       <Original>Police Station</Original>
       <German>Polizei Revier</German>
