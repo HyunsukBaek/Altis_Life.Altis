@@ -61,7 +61,7 @@ class WeaponShops {
 				{ "30Rnd_65x39_caseless_mag", "", 2000 },
 
 				{ "RPG32_F", "", 4500 },
-				{ "RPG32_HE_F", "", 4500 },
+				{ "RPG32_HE_F", "", 4500 }
 
 		};
 	};
