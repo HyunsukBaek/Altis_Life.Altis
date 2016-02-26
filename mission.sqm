@@ -141,8 +141,13 @@ class Mission
 		day=6;
 		hour=8;
 		minute=0;
-		startFogDecay=0.0049333;
-		forecastFogDecay=0.0049333;
+		startFog=0.01;
+		startFogBase = 0.0;   
+		forecastFogBase = 0.0;		
+		startFogDecay=0.005;
+		forecastFogDecay=0.005;
+		fogBeta0Min = 0.0001; 
+		fogBeta0Max = 0.02;
 	};
 	class Groups
 	{
