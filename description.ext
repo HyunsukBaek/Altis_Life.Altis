@@ -29,13 +29,13 @@ corpseRemovalMaxTime = 9999;
 #include "Config_Master.hpp"
 
 class RscTitles {
-#include "dialog\progress.hpp"
-#include "dialog\hud_nameTags.hpp"
-#include "dialog\hud_stats.hpp"
+	#include "dialog\progress.hpp"
+	#include "dialog\hud_nameTags.hpp"
+	#include "dialog\hud_stats.hpp"
 };
 
 class CfgFunctions {
-#include "Functions.hpp"
+	#include "Functions.hpp"
 };
 
 class CfgSounds
@@ -75,7 +75,7 @@ class CfgDebriefing
 	class NotWhitelisted
 	{
 		title = "Mission Failed";
-		subtitle = "이 슬롯은 인가된 사용자만 접속가능합니다. 썩 시민으로가지못할까!";
+		subtitle = "You are not white-listed to use this slot";
 		description = "You are not allowed to use this slot because you do not have the appropriate permissions, try another slot.";
 		pictureBackground = "";
 		picture = "";
@@ -84,7 +84,7 @@ class CfgDebriefing
 
 	class Blacklisted
 	{
-		title = "너 블랙! 카페에 반성문써봐 풀어줌... ";
+		title = "Mission Failed";
 		subtitle = "You are blacklisted from cops";
 		description = "You are not allowed to be a cop due to previous actions and the admins have removed you from being a cop.";
 		pictureBackground = "";

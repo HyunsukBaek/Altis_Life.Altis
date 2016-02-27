@@ -4,7 +4,7 @@
 	Description:
 	Called upon first spawn selection and welcomes our player.
 */
-format["Welcome %1, Please read the following as it is important!",profileName] hintC
+format["Welcome %1,!",profileName] hintC
 [
 		"소울Life (altis life v4.4최신적용) 서버에 입장을 환영합니다",
 	"그동안 잦은 리붓과 백섭의 원인을 모두 개선하여 안정된 버전으로 정식서비스를 시작합니다",

@@ -18,15 +18,9 @@ class Clothing {
         license = "";
         side = "civ";
         uniforms[] = {
-            { "NONE", "옷 삭제", 0, { "", "", -1 } },
+            { "NONE", "Remove Uniform", 0, { "", "", -1 } },
             { "U_C_Poloshirt_blue", "Poloshirt Blue", 250, { "", "", -1 } },
             { "U_C_Poloshirt_burgundy", "Poloshirt Burgundy", 275, { "", "", -1 } },
-			
-			{ "U_C_Poor_1", "Worn Clothes", 275, { "", "", -1 } },
-			{ "U_Competitor", "Competitor Suit", 275, { "", "", -1 } },
-			{ "U_C_Driver_1_yellow", "DriverYellow", 275, { "", "", -1 } },
-			{ "U_C_Scientist", "Scientist", 275, { "", "", -1 } },
-			
             { "U_C_Poloshirt_redwhite", "Poloshirt Red/White", 150, { "", "", -1 } },
             { "U_C_Poloshirt_salmon", "Poloshirt Salmon", 175, { "", "", -1 } },
             { "U_C_Poloshirt_stripped", "Poloshirt stripped", 125, { "", "", -1 } },
@@ -39,11 +33,17 @@ class Clothing {
             { "U_C_WorkerCoveralls", "Mechanic Coveralls", 2500, { "", "", -1 } },
             { "U_OrestesBody", "Surfing On Land", 1100, { "", "", -1 } },
             { "U_NikosAgedBody", "Casual Wears", 5000, { "", "", -1 } },
-			{ "U_NikosBody", "NIKO wears", 8000, { "", "", -1 } },
+            { "U_NikosBody", "NIKO wears", 8000, { "", "", -1 } },
+			{ "U_Competitor", "Competitor Suit", 275, { "", "", -1 } },
+			{ "U_C_Poor_1", "Worn Clothes", 275, { "", "", -1 } },
+			{ "U_C_Scientist", "Scientist", 275, { "", "", -1 } },
+			{ "U_C_Poloshirt_salmon", "Poloshirt Salmon", 175, { "", "", -1 } },
+            { "U_C_Poloshirt_redwhite", "Poloshirt Red/White", 150, { "", "", -1 } },
+            { "U_C_Driver_1_yellow", "DriverYellow", 275, { "", "", -1 } },
 			{ "U_C_Driver_1", "Kart rider 1", 15000, { "", "", -1 } },
 			{ "U_C_Driver_2", "Kart rider 2", 15000, { "", "", -1 } },
 			{ "U_C_Driver_3", "Kart rider 3", 15000, { "", "", -1 } },
-			{ "U_B_GhillieSuit", "Fucking Sniper", 515000, { "", "", -1 } }
+			{ "U_B_GhillieSuit", "Fucking Sniper", 315000, { "", "", -1 } }
         };
         headgear[] = {
             { "NONE", "Remove Hat", 0, { "", "", -1 } },
@@ -57,11 +57,6 @@ class Clothing {
             { "H_StrawHat", "Straw Fedora", 225, { "", "", -1 } },
             { "H_BandMask_blk", "Hat & Bandanna", 300, { "", "", -1 } },
             { "H_Booniehat_tan", "", 425, { "", "", -1 } },
-			
-			{ "H_Cap_press", "", 310, { "", "", -1 } },
-			{ "H_Bandanna_mcamo", "", 310, { "", "", -1 } },
-			{ "H_Cap_marshal", "", 310, { "", "", -1 } },
-			
             { "H_Hat_blue", "", 310, { "", "", -1 } },
             { "H_Hat_brown", "", 276, { "", "", -1 } },
             { "H_Hat_checker", "", 340, { "", "", -1 } },
@@ -73,6 +68,9 @@ class Clothing {
             { "H_Cap_oli", "", 150, { "", "", -1 } },
             { "H_Cap_red", "", 150, { "", "", -1 } },
             { "H_Cap_tan", "", 150, { "", "", -1 } },
+            { "H_Cap_press", "", 310, { "", "", -1 } },
+			{ "H_Bandanna_mcamo", "", 310, { "", "", -1 } },
+			{ "H_Cap_marshal", "", 310, { "", "", -1 } },
 			{ "H_Shemag_olive", "", 5150, { "", "", -1 } },
 			{ "H_RacingHelmet_1_red_F", "", 8150, { "", "", -1 } },
 			{ "H_RacingHelmet_1_white_F", "", 8150, { "", "", -1 } },
@@ -143,14 +141,13 @@ class Clothing {
 			{ "U_I_HeliPilotCoveralls", "", 550, { "life_coplevel", "SCALAR", 1 } },
 			{ "U_O_GhillieSuit", "", 550, { "life_coplevel", "SCALAR", 2 } },
 			{ "U_O_Wetsuit", "", 550, { "life_coplevel", "SCALAR", 2 } }
-			
-			
         };
         headgear[] = {
             { "NONE", "Remove Hat", 0, { "", "", -1 } },
             { "H_HelmetB_plain_mcamo", "", 75, { "life_coplevel", "SCALAR", 1 } },
-			{ "H_Cap_police", "", 75, { "life_coplevel", "SCALAR", 1 } },
             { "H_Booniehat_mcamo", "", 120, { "life_coplevel", "SCALAR", 1 } },
+  			{ "H_Cap_police", "", 75, { "life_coplevel", "SCALAR", 1 } },
+  			{ "H_MilCap_mcamo", "", 160, { "life_coplevel", "SCALAR", 2 } },
 			{ "H_Beret_blk_POLICE", "", 120, { "life_coplevel", "SCALAR", 1 } },
 			{ "H_Beret_Colonel", "", 120, { "life_coplevel", "SCALAR", 1 } },
 			{ "H_Bandanna_khk", "", 120, { "life_coplevel", "SCALAR", 1 } },
@@ -159,8 +156,7 @@ class Clothing {
 			{ "H_PilotHelmetFighter_B", "", 120, { "life_coplevel", "SCALAR", 1 } },
 			{ "H_PilotHelmetHeli_O", "", 120, { "life_coplevel", "SCALAR", 1 } },
 			{ "H_HelmetB_light_black", "", 120, { "life_coplevel", "SCALAR", 1 } },
-			{ "H_HelmetSpecO_ocamo", "", 120, { "life_coplevel", "SCALAR", 2 } },
-			{ "H_MilCap_mcamo", "", 160, { "life_coplevel", "SCALAR", 2 } }
+			{ "H_HelmetSpecO_ocamo", "", 120, { "life_coplevel", "SCALAR", 2 } }
         };
         goggles[] = {
             { "NONE", "Remove Glasses", 0, { "", "", -1 } },
@@ -180,9 +176,9 @@ class Clothing {
         };
         vests[] = {
             { "NONE", "Remove Vest", 0, { "", "", -1 } },
+            { "V_Rangemaster_belt", "", 800, { "", "", -1 } },
 			{ "V_Chestrig_blk", "", 800, { "", "", -1 } },
 			{ "V_TacVest_blk_POLICE", "", 800, { "", "", -1 } },
-            { "V_Rangemaster_belt", "", 800, { "", "", -1 } },
 			{ "V_RebreatherB", "", 800, { "", "", -1 } },
 			{ "V_PlateCarrier2_rgr", "", 800, { "", "", -1 } },
 			{ "V_Press_F", "", 800, { "", "", -1 } },
@@ -281,12 +277,10 @@ class Clothing {
             { "NONE", "Remove Hat", 0, { "", "", -1 } },
             { "H_Cap_blu", "", 1000, { "", "", -1 } },
 			{ "H_Cap_red", "", 1000, { "", "", -1 } },
-
 			{ "H_Cap_surfer", "", 1000, { "", "", -1 } },
 			{ "H_Bandanna_surfer", "", 1000, { "", "", -1 } },
 			{ "H_Bandanna_blu", "", 1000, { "", "", -1 } },
 			{ "H_Cap_marshal", "", 1000, { "", "", -1 } },
-
 			{ "H_RacingHelmet_1_green_F", "", 5000, { "", "", -1 } },
 			{ "H_RacingHelmet_1_blue_F", "", 5000, { "", "", -1 } },
 			{ "H_RacingHelmet_1_orange_F", "", 5000, { "", "", -1 } },

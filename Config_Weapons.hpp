@@ -181,7 +181,7 @@ class WeaponShops {
 		name = "경찰무기(살상)";
 		side = "cop";
 		license = "";
-		level[] = { "life_coplevel", "SCALAR", 1, "1렙이상되셔야합니다" };
+		level[] = { "life_coplevel", "SCALAR", 2, "2렙이상되셔야합니다" };
 		items[] = {
 				{ "hgun_Pistol_heavy_02_Yorris_F", "Yorris간지권총", 30000, 15000 },
 				{ "arifle_MX_F", "", 135000, 7500 },

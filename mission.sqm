@@ -123,7 +123,7 @@ class Mission
 	class Intel
 	{
 		briefingName="Soul Life RPG(Altis) v4.4";
-		overviewText="Addon Free !!  by SoulFucker";
+		overviewText="네이버카페 검색 '소울퍼커' 서버";
 		startWeather=0.099999994;
 		startWind=0.29999998;
 		startWindDir=20;
