@@ -13,4 +13,3 @@ player addEventHandler["InventoryOpened", {_this call life_fnc_inventoryOpened}]
 	waitUntil{isNull (findDisplay 38500)}; //Wait for the spawn selection to be done.
 	player addEventHandler["onPlayerDisconnected", {_this call SOCK_fnc_updateRequest}];
 };
-"life_fnc_MP_packet" addPublicVariableEventHandler {[_this select 0,_this select 1] call life_fnc_MPexec;};
