@@ -8,53 +8,53 @@
 //
 //  Usage:
 //
-//    ï¿½ KRON_StrToArray - Converts a string into an array of characters: 
+//    • KRON_StrToArray - Converts a string into an array of characters: 
 //                        _array=[_str] call KRON_StrToArray
 //
-//    ï¿½ KRON_StrLen     - Returns the length of the string
+//    • KRON_StrLen     - Returns the length of the string
 //                        _len=[_str] call KRON_StrLen
 //
-//    ï¿½ KRON_StrLeft    - Returns l characters from the left side of the string 
+//    • KRON_StrLeft    - Returns l characters from the left side of the string 
 //                        _left=[_str,l] call KRON_StrLeft
 //
-//    ï¿½ KRON_StrRight   - Returns l characters from the right side of the string 
+//    • KRON_StrRight   - Returns l characters from the right side of the string 
 //                        _right=[_str,l] call KRON_StrRight
 //
-//    ï¿½ KRON_StrMid     - Returns l characters from the string, starting at position p (zero-based)
+//    • KRON_StrMid     - Returns l characters from the string, starting at position p (zero-based)
 //                        If l is not defined, the rest of the string is returned
 //                        _mid=[_str,p,(l)] call KRON_StrMid
 //
-//    ï¿½ KRON_StrInStr   - Tests whether string b is present in string a
+//    • KRON_StrInStr   - Tests whether string b is present in string a
 //                        _found=[a,b] call KRON_StrInStr
 //
-//    ï¿½ KRON_StrIndex   - Returns the position of string b in string a
+//    • KRON_StrIndex   - Returns the position of string b in string a
 //                        _index=[a,b] call KRON_StrIndex
 //
-//    ï¿½ KRON_StrUpper   - Converts a string to uppercase characters
+//    • KRON_StrUpper   - Converts a string to uppercase characters
 //                        _upper=[_str] call KRON_StrUpper
 //
-//    ï¿½ KRON_StrLower   - Converts a string to lowercase characters
+//    • KRON_StrLower   - Converts a string to lowercase characters
 //                        _lower=[_str] call KRON_StrLower
 //
-//    ï¿½ KRON_Replace    - Replaces every occurrence of string _old in string _str with string _new
+//    • KRON_Replace    - Replaces every occurrence of string _old in string _str with string _new
 //                        _index=[_str,_old,_new] call KRON_Replace
 //
-//    ï¿½ KRON_FindFlag   - Checks a mixed array (_this) for the presence of a string (_str)
+//    • KRON_FindFlag   - Checks a mixed array (_this) for the presence of a string (_str)
 //                        _flg=[_this,_str] call KRON_FindFlag
 //
-//    ï¿½ KRON_getArg     - Searches a mixed array (_this) for a matching string beginning with (_t), and returns the part after a separator (s)
+//    • KRON_getArg     - Searches a mixed array (_this) for a matching string beginning with (_t), and returns the part after a separator (s)
 //                        A default value can be defined as (_d).
 //                        _arg=[_this,_t,(_d)] call KRON_getArg
 //
-//    ï¿½ KRON_getArgRev  - Works like getArg, but search for the part *after* the colon, and return the part in front of it
+//    • KRON_getArgRev  - Works like getArg, but search for the part *after* the colon, and return the part in front of it
 //                        A default value can be defined as (_d).
 //                        _arg=[_this,_t,(_d)] call KRON_getArgRev
 //
-//    ï¿½ KRON_Compare    - Compares two elements and returns -1 if first is smaller, 1 if second is smaller, and 0 if equal
+//    • KRON_Compare    - Compares two elements and returns -1 if first is smaller, 1 if second is smaller, and 0 if equal
 //                        If optional parameter "case" is given, capitalization is considered (upper before lowercase)
 //                        _cmp=[_str1,_str2,("case")] call KRON_Compare
 //
-//    ï¿½ KRON_ArraySort  - Sorts an array of strings in acsending order (Numbers before letters, uppercase before lowercase)
+//    • KRON_ArraySort  - Sorts an array of strings in acsending order (Numbers before letters, uppercase before lowercase)
 //                        If array is multi-dimensional, optional parameter (_idx) specifies which column is used for sorting
 //                        If optional parameter "desc" is given, order is reversed 
 //                        If optional parameter "case" is given, capitalization is considered (upper before lowercase)

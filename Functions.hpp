@@ -75,6 +75,7 @@ class Life_Client_Core
 		class repairTruck {};
 		class serviceChopper {};
 		class catchFish {};
+		class catchTurtle {};
 		class dpFinish {};
 		class dropFishingNet {};
 		class getDPMission {};
@@ -101,7 +102,6 @@ class Life_Client_Core
 		class gather {};
 		class gutAnimal {};
 		class removeContainer {};
-		class storeVehicleAction {};
 	};
 
 	class Housing
@@ -205,8 +205,6 @@ class Life_Client_Core
 		class nearATM {};
 		class playerSkins {};
 		class nearestObjects {};
-		class teleport {};
-		class searchPosEmpty {};
 		class autoSetPolice {};
 	};
 
@@ -214,6 +212,8 @@ class Life_Client_Core
 	{
 		file = "core\functions\network";
 		class broadcast {};
+		class MP {};
+		class MPexec {};
 		class corpse {};
 		class jumpFnc {};
 		class soundDevice {};
@@ -253,7 +253,6 @@ class Life_Client_Core
 		class deviceMine {};
 		class addVehicle2Chain {};
 		class FuelRefuelcar {};
-		class vehiclecolor3DRefresh {};
 	};
 
 	class Cop
@@ -319,7 +318,6 @@ class Life_Client_Core
 		class weaponShopSelection {};
 		class weaponShopBuySell {};
 		class weaponShopMags {};
-		class weaponShopAccs {};
 		class virt_buy {};
 		class virt_menu {};
 		class virt_update {};
@@ -329,14 +327,12 @@ class Life_Client_Core
 		class chopShopSell {};
 		class FuelStatOpen {};
 		class FuelLBchange {};
-		class vehicleShopEnd3DPreview {};
-		class vehicleShopInit3DPreview {};
-		class vehicleShop3DPreview {};
 	};
 
 	class Items
 	{
 		file = "core\items";
+		class pickaxeUse {};
 		class lockpick {};
 		class spikeStrip {};
 		class jerryRefuel {};
