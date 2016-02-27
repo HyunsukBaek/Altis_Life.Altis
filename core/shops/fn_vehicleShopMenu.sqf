@@ -43,8 +43,7 @@ ctrlShow [2304,false];
 //Loop through
 {
 	_className = SEL(_x,0);
-	_basePrice = SEL(_x,1);
-	_levelAssert = SEL(_x,3);
+	_levelAssert = SEL(_x,1);
 	_levelName = SEL(_levelAssert,0);
 	_levelType = SEL(_levelAssert,1);
 	_levelValue = SEL(_levelAssert,2);
@@ -70,3 +69,6 @@ ctrlShow [2304,false];
 		_control lbSetValue [(lbSize _control)-1,_ForEachIndex];
 	};
 } foreach _vehicleList;
+
+[] call life_fnc_vehicleShopInit3DPreview;
+((findDisplay 2300) displayCtrl 2302) lbSetCurSel 0;
