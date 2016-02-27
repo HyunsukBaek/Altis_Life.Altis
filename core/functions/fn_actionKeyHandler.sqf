@@ -9,7 +9,6 @@
 */
 private["_curTarget","_isWater","_CrateModelNames","_crate"];
 _curTarget = cursorTarget;
-_curObject = cursorObject;
 if(life_action_inUse) exitWith {}; //Action is in use, exit to prevent spamming.
 if(life_interrupted) exitWith {life_interrupted = false;};
 _isWater = surfaceIsWater (visiblePositionASL player);
@@ -23,21 +22,13 @@ if(EQUAL(LIFE_SETTINGS(getNumber,"global_ATM"),1)) then{
 
 if(isNull _curTarget) exitWith {
 	if(_isWater) then {
-		_fishconfig = LIFE_SETTINGS(getArray,"animaltypes_fish");
-		_fishTypes = [position player, _fishconfig, 3] call life_fnc_nearestObjects;
-		if(count _fishTypes > 0) then {
-			_fish = _fishTypes select 0;
-			if ((typeOf _fish) == "Turtle_F" && !alive _fish) then {
-				[_fish] call life_fnc_catchFish;
-			} else {
-				if (!((typeOf _fish) == "Turtle_F")) then {
-					[_fish] call life_fnc_catchFish;
-				};
-			};
+		private "_fish";
+		_fish = (nearestObjects[visiblePosition player,["Fish_Base_F"],3]) select 0;
+		if(!isNil "_fish") then {
+			[_fish] call life_fnc_catchFish;
 		};
 	} else {
-		_animalconfig = LIFE_SETTINGS(getArray,"animaltypes_hunting");
-		_animals = [position player, _animalconfig, 3.5] call life_fnc_nearestObjects;
+		_animals = [position player, ["Sheep_random_F","Goat_random_F","Hen_random_F","Cock_random_F","Rabbit_F"], 3.5] call life_fnc_nearestObjects;
 		if (count _animals > 0) then {
 			_animal = _animals select 0;
 			if (!alive _animal) then {
@@ -107,13 +98,26 @@ if(isPlayer _curTarget && _curTarget isKindOf "Man") then {
 			};
 		};
 	} else {
-		//OK, it wasn't a vehicle so let's see what else it could be?
-		if((typeOf _curObject) in _miscItems) then {
-			[_curObject,player,false] remoteExecCall ["TON_fnc_pickupAction",RSERV];
+		//Is it a animal type?
+		if((typeOf _curTarget) in _animalTypes) then {
+			if(EQUAL((typeOf _curTarget),"Turtle_F") && !alive _curTarget) then {
+				private "_handle";
+				_handle = [_curTarget] spawn life_fnc_catchTurtle;
+				waitUntil {scriptDone _handle};
+			} else {
+				private "_handle";
+				_handle = [_curTarget] spawn life_fnc_catchFish;
+				waitUntil {scriptDone _handle};
+			};
 		} else {
-			//It wasn't a misc item so is it money?
-			if(EQUAL((typeOf _curObject),_money) && {!(_curObject GVAR ["inUse",false])}) then {
-				[_curObject,player,true] remoteExecCall ["TON_fnc_pickupAction",RSERV];
+			//OK, it wasn't a vehicle so let's see what else it could be?
+			if((typeOf _curTarget) in _miscItems) then {
+				[_curTarget,player,false] remoteExecCall ["TON_fnc_pickupAction",RSERV];
+			} else {
+				//It wasn't a misc item so is it money?
+				if(EQUAL((typeOf _curTarget),_money) && {!(_curTarget GVAR ["inUse",false])}) then {
+					[_curTarget,player,true] remoteExecCall ["TON_fnc_pickupAction",RSERV];
+				};
 			};
 		};
 	};

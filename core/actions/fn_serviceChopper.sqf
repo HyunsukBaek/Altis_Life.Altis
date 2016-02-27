@@ -6,17 +6,16 @@
 	Description:
 	Main functionality for the chopper service paid, to be replaced in later version.
 */
-private ["_serviceCost"];
 disableSerialization;
 private["_search","_ui","_progress","_cP","_pgText"];
 if(life_action_inUse) exitWith {hint localize "STR_NOTF_Action"};
 
-_serviceCost = LIFE_SETTINGS(getNumber,"service_chopper");
-_search = nearestObjects[getPos air_sp, ["Air"],10];
+_search = nearestObjects[getPos air_sp, ["Air"],5];
 
 if(EQUAL(count _search,0)) exitWith {hint localize "STR_Service_Chopper_NoAir"};
-if(CASH < _serviceCost) exitWith {hint localize "STR_Serive_Chopper_NotEnough"};
+if(CASH < 1000) exitWith {hint localize "STR_Serive_Chopper_NotEnough"};
 
+SUB(CASH,1000);
 life_action_inUse = true;
 5 cutRsc ["life_progress","PLAIN"];
 _ui = GVAR_UINS "life_progress";
@@ -34,9 +33,7 @@ while {true} do {
 	if(_cP >= 1) exitWith {};
 };
 
-if(!alive SEL(_search,0) || SEL(_search,0) distance air_sp > 15) exitWith {life_action_inUse = false; hint localize "STR_Service_Chopper_Missing"};
-
-SUB(CASH,_serviceCost);
+if(!alive SEL(_search,0) || SEL(_search,0) distance air_sp > 10) exitWith {life_action_inUse = false; hint localize "STR_Service_Chopper_Missing"};
 if(!local SEL(_search,0)) then {
 	[SEL(_search,0),1] remoteExecCall ["life_fnc_setFuel",SEL(_search,0)];
 } else {

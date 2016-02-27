@@ -2,9 +2,6 @@
 /*
 	File: fn_updateRequest.sqf
 	Author: Tonic
-
-	Description:
-
 */
 private["_packet","_array","_flag"];
 _packet = [getPlayerUID player,(profileName),playerSide,CASH,BANK];
@@ -24,7 +21,6 @@ _packet pushBack life_gear;
 _array = [];
 _array pushBack life_hunger;
 _array pushBack life_thirst;
-_array pushBack (damage player);
 _packet pushBack _array;
 
 switch (playerSide) do {
@@ -33,8 +29,4 @@ switch (playerSide) do {
 	};
 };
 
-if(life_HC_isActive) then {
-	_packet remoteExecCall ["HC_fnc_updateRequest",HC_Life];
-} else {
-	_packet remoteExecCall ["DB_fnc_updateRequest",RSERV];
-};
+_packet remoteExecCall ["DB_fnc_updateRequest",RSERV];

@@ -6,7 +6,6 @@
 	Description:
 	Adds the tags above other players heads when close and have visible range.
 */
-if (!life_settings_tagson) exitwith {};
 private["_ui","_units","_masks"];
 #define iconID 78000
 #define scale 0.8

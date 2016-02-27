@@ -1,9 +1,5 @@
 #include "..\script_macros.hpp"
 /*
-	File: init.sqf
-	Author: 
-	
-	Description:
 	Master client initialization file
 */
 life_firstSpawn = true;
@@ -88,6 +84,10 @@ switch (playerSide) do {
 		_handle = [] spawn life_fnc_initMedic;
 		waitUntil {scriptDone _handle};
 	};
+	case sideLogic:    {   
+	    _handle = [] spawn life_fnc_initZeus;
+	    waitUntil {scriptDone _handle};
+    };
 };
 
 player SVAR ["restrained",false,true];
@@ -108,7 +108,8 @@ diag_log "----------------------------------------------------------------------
 diag_log format["                End of Altis Life Client Init :: Total Execution Time %1 seconds ",(diag_tickTime) - _timeStamp];
 diag_log "------------------------------------------------------------------------------------------------------";
 
-[player,life_settings_enableSidechannel,playerSide] remoteExecCall ["TON_fnc_managesc",RSERV];
+life_sidechat = true;
+[player,life_sidechat,playerSide] remoteExecCall ["TON_fnc_managesc",RSERV];
 0 cutText ["","BLACK IN"];
 [] call life_fnc_hudSetup;
 
@@ -126,9 +127,6 @@ life_fnc_moveIn = compileFinal
 	life_disable_getOut = true;
 ";
 
-life_fnc_RequestClientId = player;
-publicVariableServer "life_fnc_RequestClientId"; //Variable OwnerID for HeadlessClient
-
 [] spawn life_fnc_survival;
 
 [] spawn {
@@ -143,11 +141,7 @@ CONSTVAR(life_paycheck); //Make the paycheck static.
 if(EQUAL(LIFE_SETTINGS(getNumber,"enable_fatigue"),0)) then {player enableFatigue false;};
 
 if(EQUAL(LIFE_SETTINGS(getNumber,"Pump_service"),1)) then{
-	[] execVM "core\fn_setupStationService.sqf";
+	[] execVM "core\fn_Setup_Sation_Service.sqf";
 };
 
-if(life_HC_isActive) then {
-	[getPlayerUID player,player getVariable["realname",name player]] remoteExec ["HC_fnc_wantedProfUpdate",HC_Life];
-} else {
-	[getPlayerUID player,player getVariable["realname",name player]] remoteExec ["life_fnc_wantedProfUpdate",RSERV];
-};
+[getPlayerUID player,player getVariable["realname",name player]] remoteExec ["life_fnc_wantedProfUpdate",RSERV];

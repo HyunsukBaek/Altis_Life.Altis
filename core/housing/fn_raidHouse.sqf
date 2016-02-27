@@ -1,6 +1,5 @@
 #include "..\..\script_macros.hpp"
 /*
-	File: fn_raidHouse.sqf
 	Author: Bryan "Tonic" Boardwine
 	
 	Description:
@@ -74,13 +73,7 @@ if(_value > 0) then {
 	ADD(BANK,round(_value / 2));
 	
 	_house SVAR ["Trunk",[_houseInvData,_houseInvVal],true];
-	
-	if(life_HC_isActive) then {
-		[_house] remoteExecCall ["HC_fnc_updateHouseTrunk",HC_Life];
-	} else {
-		[_house] remoteExecCall ["TON_fnc_updateHouseTrunk",RSERV];
-	};
-	
+	[_house] remoteExecCall ["TON_fnc_updateHouseTrunk",RSERV];
 } else {
 	hint localize "STR_House_Raid_NoIllegal";
 };

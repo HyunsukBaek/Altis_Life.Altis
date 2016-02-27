@@ -54,7 +54,6 @@ switch(playerSide) do {
 		if(EQUAL(LIFE_SETTINGS(getNumber,"save_playerStats"),1)) then {
 			life_hunger = SEL(SEL(_this,10),0);
 			life_thirst = SEL(SEL(_this,10),1);
-			player setDamage SEL(SEL(_this,10),2);
 		};
 	};
 
@@ -62,18 +61,17 @@ switch(playerSide) do {
 		life_is_arrested = SEL(_this,7);
 		CONST(life_coplevel, 0);
 		CONST(life_medicLevel, 0);
-		life_houses = SEL(_this,11);
+		life_houses = SEL(_this,10);
 		if(EQUAL(LIFE_SETTINGS(getNumber,"save_playerStats"),1)) then {
 			life_hunger = SEL(SEL(_this,9),0);
 			life_thirst = SEL(SEL(_this,9),1);
-			player setDamage SEL(SEL(_this,9),2);
 		};
 		{
 			_house = nearestBuilding (call compile format["%1", SEL(_x,0)]);
 			life_vehicles pushBack _house;
 		} foreach life_houses;
 
-		life_gangData = SEL(_this,12);
+		life_gangData = SEL(_this,11);
 		if(!(EQUAL(count life_gangData,0))) then {
 			[] spawn life_fnc_initGang;
 		};
@@ -86,7 +84,6 @@ switch(playerSide) do {
 		if(EQUAL(LIFE_SETTINGS(getNumber,"save_playerStats"),1)) then {
 			life_hunger = SEL(SEL(_this,9),0);
 			life_thirst = SEL(SEL(_this,9),1);
-			player setDamage SEL(SEL(_this,9),2);
 		};
 	};
 };

@@ -2,14 +2,13 @@
 /*
 	File: fn_vehicleShopLBChange.sqf
 	Author: Bryan "Tonic" Boardwine
-	Modified : NiiRoZz
 
 	Description:
 	Called when a new selection is made in the list box and
 	displays various bits of information about the vehicle.
 */
 disableSerialization;
-private["_control","_index","_className","_classNameLife","_basePrice","_vehicleInfo","_colorArray","_ctrl","_trunkSpace","_maxspeed","_horsepower","_passengerseats","_fuel","_armor","_multiplicator"];
+private["_control","_index","_className","_classNameLife","_basePrice","_vehicleInfo","_colorArray","_ctrl"];
 _control = _this select 0;
 _index = _this select 1;
 
@@ -18,22 +17,11 @@ _className = _control lbData _index;
 _classNameLife = _className;
 _vIndex = _control lbValue _index;
 
-_basePrice = switch(playerSide) do {
-	case civilian: {SEL(M_CONFIG(getArray,CONFIG_LIFE_VEHICLES,_classNameLife,"rentalprice"),0)};
-	case west: {SEL(M_CONFIG(getArray,CONFIG_LIFE_VEHICLES,_classNameLife,"rentalprice"),1)};
-	case independent: {SEL(M_CONFIG(getArray,CONFIG_LIFE_VEHICLES,_classNameLife,"rentalprice"),2)};
-	case east: {SEL(M_CONFIG(getArray,CONFIG_LIFE_VEHICLES,_classNameLife,"rentalprice"),3)};
-};
+_vehicleList = M_CONFIG(getArray,"CarShops",SEL(life_veh_shop,0),"vehicles");
+_basePrice = SEL(SEL(_vehicleList,_vIndex),1);
 
 _vehicleInfo = [_className] call life_fnc_fetchVehInfo;
 _trunkSpace = [_className] call life_fnc_vehicleWeightCfg;
-_maxspeed = _vehicleInfo select 8;
-_horsepower = _vehicleInfo select 11;
-_passengerseats = _vehicleInfo select 10;
-_fuel = _vehicleInfo select 12;
-_armor = _vehicleInfo select 9;
-[_className] call life_fnc_vehicleShop3DPreview;
-_multiplicator = LIFE_SETTINGS(getNumber,"vehicleShop_BuyMultiplicator");
 
 ctrlShow [2330,true];
 (CONTROL(2300,2303)) ctrlSetStructuredText parseText format[
@@ -43,16 +31,16 @@ ctrlShow [2330,true];
 (localize "STR_Shop_Veh_UI_HPower")+ " %4<br/>" +
 (localize "STR_Shop_Veh_UI_PSeats")+ " %5<br/>" +
 (localize "STR_Shop_Veh_UI_Trunk")+ " %6<br/>" +
-(localize "STR_Shop_Veh_UI_Fuel")+ " %7<br/>" +
+(localize "STR_Shop_Veh_UI_Fuel")+ " %7l<br/>" +
 (localize "STR_Shop_Veh_UI_Armor")+ " %8",
 [_basePrice] call life_fnc_numberText,
-[round(_basePrice * _multiplicator)] call life_fnc_numberText,
-_maxspeed,
-_horsepower,
-_passengerseats,
+[round(_basePrice * 1.5)] call life_fnc_numberText,
+_vehicleInfo select 8,
+_vehicleInfo select 11,
+_vehicleInfo select 10,
 if(_trunkSpace == -1) then {"None"} else {_trunkSpace},
-_fuel,
-_armor
+_vehicleInfo select 12,
+_vehicleInfo select 9
 ];
 
 _ctrl = CONTROL(2300,2304);
@@ -73,15 +61,6 @@ _colorArray = M_CONFIG(getArray,CONFIG_LIFE_VEHICLES,_classNameLife,"textures");
 	};
 } foreach _colorArray;
 
-_numberindexcolor = 0;
-_numberindexcolorarray = [];
-for "_i" from 0 to (count(_colorArray) - 1) do {
-	_numberindexcolorarray pushback _numberindexcolor;
-	_numberindexcolor = _numberindexcolor + 1;
-};
-_indexrandom = _numberindexcolorarray call BIS_fnc_selectRandom;
-_ctrl lbSetCurSel _indexrandom;
-
 if(_className in (LIFE_SETTINGS(getArray,"vehicleShop_rentalOnly"))) then {
 	ctrlEnable [2309,false];
 } else {
@@ -90,6 +69,7 @@ if(_className in (LIFE_SETTINGS(getArray,"vehicleShop_rentalOnly"))) then {
 	};
 };
 
+lbSetCurSel[2304,0];
 if((lbSize _ctrl)-1 != -1) then {
 	ctrlShow[2304,true];
 } else {

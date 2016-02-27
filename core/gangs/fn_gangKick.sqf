@@ -1,6 +1,5 @@
 #include "..\..\script_macros.hpp"
 /*
-	File: fn_gangKick.sqf
 	Author: Bryan "Tonic" Boardwine
 	
 	Description:
@@ -24,11 +23,5 @@ SUB(_members,[_unitID]);
 grpPlayer SVAR ["gang_members",_members,true];
 
 [_unit,grpPlayer] remoteExec ["TON_fnc_clientGangKick",_unit]; //Boot that bitch!
-
-if(life_HC_isActive) then {
-	[4,grpPlayer] remoteExec ["HC_fnc_updateGang",HC_Life]; //Update the database.
-} else {
-	[4,grpPlayer] remoteExec ["TON_fnc_updateGang",RSERV]; //Update the database.
-};
-
+[4,grpPlayer] remoteExec ["TON_fnc_updateGang",RSERV]; //Update the database.
 [] call life_fnc_gangMenu;
