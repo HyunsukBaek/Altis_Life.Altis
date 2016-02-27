@@ -519,7 +519,7 @@ class LifeCfgVehicles {
 				{ "영국 Police", "cop", {"textures\cop\police_uk_offroad.jpg"} },
 				{ "SWAT", "cop", {"textures\cop\swat_offroad.jpg"} },
 
-				{ "Red", "civ", {
+				{ "Red", "med", {
 						"\A3\soft_F\Offroad_01\Data\offroad_01_ext_co.paa",
 						"\A3\soft_F\Offroad_01\Data\offroad_01_ext_co.paa"
 				} },

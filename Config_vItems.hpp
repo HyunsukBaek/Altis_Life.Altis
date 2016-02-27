@@ -10,7 +10,7 @@ class VirtualShops {
 	//Virtual Shops
 	class market {
 		name = "STR_Shops_Market";
-		side = "civ";
+		side = "";
 		license = "";
 		level[] = { "", "", -1, "" };
 		items[] = { "waterBottle", "rabbit", "apple", "redgull", "tbacon", "lockpick", "pickaxe", "fuelFull", "peach", "boltcutter", "storagesmall", "storagebig", "rabbit_raw", "hen_raw", "rooster_raw", "sheep_raw", "goat_raw" };
@@ -42,7 +42,7 @@ class VirtualShops {
 
 	class coffee {
 		name = "STR_Shops_Coffee";
-		side = "civ";
+		side = "";
 		license = "";
 		level[] = { "", "", -1, "" };
 		items[] = { "coffee", "donuts" };
@@ -130,7 +130,7 @@ class VirtualShops {
 
 	class cop {
 		name = "STR_Shops_Cop";
-		side = "cop";
+		side = "";
 		license = "";
 		level[] = { "", "", -1, "" };
 		items[] = { "donuts", "coffee", "spikeStrip", "waterBottle", "rabbit", "apple", "redgull", "fuelFull", "defusekit" };
@@ -234,7 +234,7 @@ class VirtualItems {
 		variable = "boltCutter";
 		displayName = "STR_Item_BCutter";
 		weight = 7;
-		buyPrice = 125500;
+		buyPrice = 85500;
 		sellPrice = 71000;
 		illegal = true;
 		edible = -1;
