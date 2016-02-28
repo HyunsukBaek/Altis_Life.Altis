@@ -68,7 +68,6 @@ class CarShops {
             { "O_Truck_03_transport_F", 200000, { "trucking" }, { "", "", -1 } },
             { "O_Truck_03_covered_F", 250000, { "trucking" }, { "", "", -1 } },
             { "B_Truck_01_box_F", 350000, { "trucking" }, { "", "", -1 } },
-            { "O_Truck_03_device_F", 450000, { "trucking" }, { "", "", -1 } },
             { "C_Van_01_fuel_F", 90000, { "trucking" }, { "", "", -1 } }
         };
     };
@@ -170,7 +169,7 @@ class LifeCfgVehicles {
 	 */
 
 	class Default {
-		vItemSpace = -1;
+		vItemSpace = 10;
 		storageFee[] = { 1000, 1000, 1000, 1000 };
 		garageSell[] = { 1000, 1000, 1000, 1000 };
 		insurance = 2500;
@@ -322,6 +321,18 @@ class LifeCfgVehicles {
 		textures[] = { };
 	};
 	
+	class B_Truck_01_transport_F {
+		vItemSpace = 355;
+		storageFee[] = { 15650, 0, 15650, 0 };
+		garageSell[] = { 165000, 0, 165000, 0 };
+		insurance = 2500;
+		chopShop = 140500;
+		textures[] = {
+			{ "yellow", "civ", {"#(argb,8,8,3)color(0.6,0.3,0.01,1)"}},
+			{ "Orange", "civ", {"\A3\Soft_F_Beta\Truck_02\data\truck_02_kab_co.paa","\a3\soft_f_beta\Truck_02\data\truck_02_kuz_co.paa"} },
+			{ "Black", "cop", {"#(argb,8,8,3)color(0.05,0.05,0.05,1)"}}
+		};
+	};
 
 	class O_Truck_03_transport_F {
 		vItemSpace = 285;
@@ -410,15 +421,6 @@ class LifeCfgVehicles {
 		garageSell[] = { 50000, 0, 0, 0 };
 		insurance = 2500;
 		chopShop = 35000;
-		textures[] = { };
-	};
-
-	class B_Truck_01_transport_F {
-		vItemSpace = 325;
-		storageFee[] = { 15650, 0, 15650, 0 };
-		garageSell[] = { 165000, 0, 165000, 0 };
-		insurance = 2500;
-		chopShop = 140500;
 		textures[] = { };
 	};
 
@@ -725,12 +727,9 @@ class LifeCfgVehicles {
 				{ "Hello kitty", "civ", {"textures\cars\kitty.jpg"} },
 				{ "Cube", "civ", {"textures\cars\cube_suv.jpg"} },
 				{ "Poly", "civ", {"textures\cars\poly_suv.jpg"} },
-				{ "Dark Red", "civ", {
-						"\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_co.paa"
-				} },
+				{ "Dark Red", "civ", {"\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_co.paa"} },
 				{ "Police", "cop", {"textures\cop\police_suv.jpg"} },
 				{ "UK Police", "cop", {"textures\cop\police_uk_suv.jpg"} },
-
 				{ "EMS red", "med", {"textures\cars\EMS_SUV.jpg"} },
 				{ "EMS white", "med", {"textures\cars\EMS_SUV_1.jpg"} }
 
