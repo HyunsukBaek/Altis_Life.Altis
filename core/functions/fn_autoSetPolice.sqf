@@ -32,7 +32,7 @@ if (life_cash > 99999) then //100k
 	removeHeadGear player;
 	sleep 2;
 	//Arma id for weapons, clothes, ...
-	player addUniform "U_B_CombatUniform_mcam";
+	player addUniform "U_Rangemaster";
 	player addVest "V_TacVest_blk_POLICE";
 	player addBackpack "B_Bergen_blk";
 	player addHeadGear "H_Beret_blk_POLICE";
