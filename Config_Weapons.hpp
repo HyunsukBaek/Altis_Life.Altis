@@ -25,7 +25,7 @@ class WeaponShops {
 				{ "hgun_Rook40_F", "", 36500, 5500 },
 				{ "hgun_Pistol_heavy_02_F", "", 49850, 6000 },
 				{ "hgun_ACPC2_F", "", 65500, 10000 },
-				{ "hgun_PDW2000_F", "", 75000, 20000 },
+				{ "hgun_PDW2000_F", "", 115000, 20000 },
 				{ "optic_ACO_grn_smg", "", 2500, 250 }
 		};
 		mags[] = {
@@ -42,12 +42,12 @@ class WeaponShops {
 		license = "rebel";
 		level[] = { "", "", -1, "" };
 		items[] = {
-				{ "arifle_TRG20_F", "", 95000, 35000 },
-				{ "arifle_Katiba_F", "", 115000, 45000 },
-				{ "srifle_DMR_01_F", "", 120000, 47000},
-				{ "arifle_SDAR_F", "", 130000, 64500 },
-				{ "arifle_MXC_SOS_point_snds_F", "", 170000, 107500 },
-				{ "launch_RPG32_F", "", 280000, 140500 },
+				{ "arifle_TRG20_F", "", 135000, 55000 },
+				{ "arifle_Katiba_F", "", 155000, 75000 },
+				{ "srifle_DMR_01_F", "", 190000, 97000},
+				{ "arifle_SDAR_F", "", 210000, 104500 },
+				{ "arifle_MXC_SOS_point_snds_F", "", 410000, 207500 },
+				{ "launch_RPG32_F", "", 320000, 160500 },
 				{ "optic_ACO_grn", "", 3500, 1350 },
 				{ "optic_Holosight", "", 3600, 1275 },
 				{ "optic_Hamr", "", 7500, 2500 },
@@ -60,8 +60,8 @@ class WeaponShops {
 				{ "20Rnd_556x45_UW_mag", "", 1250 },
 				{ "30Rnd_65x39_caseless_mag", "", 2000 },
 
-				{ "RPG32_F", "", 4500 },
-				{ "RPG32_HE_F", "", 4500 }
+				{ "RPG32_F", "", 25000 },
+				{ "RPG32_HE_F", "", 25000 }
 
 		};
 	};
