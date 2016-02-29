@@ -129,7 +129,7 @@ class CarShops {
 		vehicles[] = {
 				{ "B_Boat_Transport_01_F", 55000, { "cg" }, { "", "", -1 } },
 				{ "C_Boat_Civil_01_police_F", 50000, { "cg" }, { "", "", -1 } },
-				{ "B_Boat_Armed_01_minigun_F", 75000, { "cg" }, { "life_coplevel", "SCALAR", 3 } },
+//				{ "B_Boat_Armed_01_minigun_F", 75000, { "cg" }, { "life_coplevel", "SCALAR", 3 } },
 				{ "B_SDV_01_F", 200000, { "cg" }, { "", "", -1 } }
 		};
 	};
@@ -294,14 +294,14 @@ class LifeCfgVehicles {
 		textures[] = { };
 	};
 
-	class B_Boat_Armed_01_minigun_F {
-		vItemSpace = 175;
-		storageFee[] = { 0, 16500, 0, 0 };
-		garageSell[] = { 0, 21000, 0, 0 };
-		insurance = 2500;
-		chopShop = 5000;
-		textures[] = { };
-	};
+//	class B_Boat_Armed_01_minigun_F {
+//		vItemSpace = 175;
+//		storageFee[] = { 0, 16500, 0, 0 };
+//		garageSell[] = { 0, 21000, 0, 0 };
+//		insurance = 2500;
+//		chopShop = 5000;
+//		textures[] = { };
+//	};
 
 	class I_Boat_Armed_01_minigun_F {
 		vItemSpace = 175;
