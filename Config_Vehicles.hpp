@@ -95,7 +95,7 @@ class CarShops {
 				{ "B_MRAP_01_hmg_F", 450000, { "" }, { "life_coplevel", "SCALAR", 2 } },
 				{ "O_MRAP_02_F", 150000, { "" }, { "life_coplevel", "SCALAR", 1 } },
 				{ "O_MRAP_02_hmg_F", 550000, { "" }, { "life_coplevel", "SCALAR", 2 } },
-				{ "I_MRAP_03_hmg_F", 650000, { "" }, { "life_coplevel", "SCALAR", 1 } },
+				{ "I_MRAP_03_hmg_F", 650000, { "" }, { "life_coplevel", "SCALAR", 3 } },
 				{ "B_Truck_01_Repair_F", 250000, { "" }, { "life_coplevel", "SCALAR", 2 } },
 				{ "O_Truck_02_medical_F", 250000, { "" }, { "life_coplevel", "SCALAR", 2 } },
 				{ "O_MBT_02_cannon_F", 1950000, { "" }, { "life_coplevel", "SCALAR", 3 } },
@@ -116,7 +116,7 @@ class CarShops {
 		vehicles[] = {
 				{ "B_Heli_Light_01_F", 253000, { "cAir" }, { "", "", -1 } },
 				{ "B_Heli_Transport_01_F", 200000, { "cAir" }, { "life_coplevel", "SCALAR", 1 } },
-				{ "B_Heli_Attack_01_F", 200000, { "cAir" }, { "life_coplevel", "SCALAR", 1 } },
+				{ "B_Heli_Attack_01_F", 200000, { "cAir" }, { "life_coplevel", "SCALAR", 2 } },
 				{ "B_Heli_Light_01_armed_F", 1000000, { "cAir" }, { "life_coplevel", "SCALAR", 2 } },
 				{ "O_Heli_Attack_02_F", 2000000, { "cAir" }, { "life_coplevel", "SCALAR", 3 } },
 				{ "O_Heli_Attack_02_black_F", 2000000, { "cAir" }, { "life_coplevel", "SCALAR", 3 } },

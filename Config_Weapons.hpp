@@ -265,7 +265,6 @@ class WeaponShops {
 				{ "ItemRadio", "", 2500, 25 },
 				{ "ItemCompass", "", 250, 25 },
 				{ "ItemWatch", "", 250, -1 },
-				{ "NVGoggles", "", 10000, 980 },
 				{ "Chemlight_red", "", 1500, -1 },
 				{ "Chemlight_yellow", "", 1500, 50 },
 				{ "Chemlight_green", "", 1500, 50 },
