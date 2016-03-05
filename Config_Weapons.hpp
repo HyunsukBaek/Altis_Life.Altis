@@ -241,7 +241,7 @@ class WeaponShops {
         items[] = {
             { "srifle_EBR_DMS_pointer_snds_F", "", 300000, 225000 },
             { "srifle_LRR_LRPS_F", "", 300000, 215000 },
-	    { "srifle_DMR_01_SOS_F", "", 300000, 215000 },
+	    { "srifle_DMR_01_DMS_F", "", 300000, 215000 },
 	    { "srifle_GM6_F", "", 300000, 215000 },
 	    { "launch_Titan_F", "", 300000, 250000 },
 	    { "launch_B_Titan_short_F", "", 400000, 350000 }
@@ -251,6 +251,7 @@ class WeaponShops {
             { "7Rnd_408_Mag", "", 450 },
             { "10Rnd_762x51_Mag", "", 450 },
             { "5Rnd_127x108_Mag", "", 450 },
+	    { "5Rnd_127x108_APDS_Mag", "", 450 },
             { "Titan_AA", "", 12450 },
             { "Titan_AT", "", 12450 },
             { "Titan_AP", "", 13450 }
