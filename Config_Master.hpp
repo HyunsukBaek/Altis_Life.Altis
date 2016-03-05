@@ -113,7 +113,7 @@ class Life_Settings {
     /* Impound Variables */
     impound_car = 15000; //Price for impounding cars
     impound_boat = 20000; //Price for impounding boats
-    impound_air = 20000; //Price for impounding helicopters / planes
+    impound_air = 15000; //Price for impounding helicopters / planes
 
     /* Initial Bank Amount */
     bank_cop = 70000; //Amount of cash on bank for new cops
@@ -121,9 +121,9 @@ class Life_Settings {
     bank_med = 70000; //Amount of cash on bank for new medics
 
     /* Paycheck Amount */
-    paycheck_cop = 8000; //Payment for cops
-    paycheck_civ = 800; //Payment for civillians
-    paycheck_med = 4500; //Payment for medics
+    paycheck_cop = 9000; //Payment for cops
+    paycheck_civ = 1000; //Payment for civillians
+    paycheck_med = 6000; //Payment for medics
 
     /* Federal Reserve settings */
     noatm_timer = 10; //Time in minutes that players won't be able to deposit his money after selling stolen gold
@@ -136,7 +136,7 @@ class Life_Settings {
 
     /* Fuel Station & Heli Service settings */
     Pump_service = false; //Allow users to use pump service on the map. Default = false
-    fuel_cost = 80; //Cost of fuel per liter at fuel stations (if not defined for the vehicle already).
+    fuel_cost = 120; //Cost of fuel per liter at fuel stations (if not defined for the vehicle already).
     service_chopper = 1000; //Cost to service chopper at chopper service station.
 
     /* Skins settings */
@@ -144,9 +144,9 @@ class Life_Settings {
 
     /* Vehicle Settings */
     vehicleShop_rentalOnly[] = { "B_Boat_Armed_01_minigun_F" };
-    vehicleShop_BuyMultiplicator = 1.5;
-    vehicleGarage_SellMultiplicator = 0.75;
-    vehicleGarage_StorFeeMultiplicator = 0.2;
+    vehicleShop_BuyMultiplicator = 1.3;
+    vehicleGarage_SellMultiprmlicator = 0.75;
+    vehicleGarage_StorFeeMultiplicator = 0.05;
     vehicleChopShop_Multiplicator = 0.5;
 
     /* Job-related stuff */
