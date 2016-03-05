@@ -161,7 +161,7 @@ switch (_code) do {
 	case 38: {
 		//If cop run checks for turning lights on.
 		if(_shift && playerSide in [west,independent]) then {
-			if(vehicle player != player && (typeOf vehicle player) in ["C_Offroad_01_F","B_MRAP_01_F","C_SUV_01_F","C_Hatchback_01_sport_F","B_Heli_Light_01_F","B_Heli_Transport_01_F"]) then {
+			if(vehicle player != player && (typeOf vehicle player) in ["C_Offroad_01_F","B_MRAP_01_F","C_SUV_01_F","C_Hatchback_01_F","C_Hatchback_01_sport_F","B_Heli_Light_01_F","B_Heli_Transport_01_F", "B_MRAP_01_hmg_F", "O_MRAP_02_F", "O_MRAP_02_hmg_F"]) then {
 				if(!isNil {vehicle player GVAR "lights"}) then {
 					if(playerSide == west) then {
 						[vehicle player] call life_fnc_sirenLights;
@@ -179,7 +179,11 @@ switch (_code) do {
 	//Y Player Menu
 	case 21: {
 		if(!_alt && !_ctrlKey && !dialog && !(player GVAR ["restrained",false]) && {!life_action_inUse}) then {
-			[] call life_fnc_p_openMenu;
+			if(!_shift) then {
+				[] call life_fnc_p_openMenu;
+			} else {
+				[] call life_fnc_altisPhone;
+			};
 		};
 	};
 
@@ -253,15 +257,100 @@ switch (_code) do {
 					if(EQUAL(_locked,2)) then {
 						if(local _veh) then {
 							_veh lock 0;
+
+							// BI
+							_veh animateDoor ["door_back_R",1];
+							_veh animateDoor ["door_back_L",1];
+							_veh animateDoor ['door_R',1];
+							_veh animateDoor ['door_L',1];
+							_veh animateDoor ['Door_L_source',1];
+							_veh animateDoor ['Door_rear',1];
+							_veh animateDoor ['Door_rear_source',1];
+							_veh animateDoor ['Door_1_source',1];
+							_veh animateDoor ['Door_2_source',1];
+							_veh animateDoor ['Door_3_source',1];
+							_veh animateDoor ['Door_LM',1];
+							_veh animateDoor ['Door_RM',1];
+							_veh animateDoor ['Door_LF',1];
+							_veh animateDoor ['Door_RF',1];
+							_veh animateDoor ['Door_LB',1];
+							_veh animateDoor ['Door_RB',1];
+							_veh animateDoor ['DoorL_Front_Open',1];
+							_veh animateDoor ['DoorR_Front_Open',1];
+							_veh animateDoor ['DoorL_Back_Open',1];
+							_veh animateDoor ['DoorR_Back_Open ',1];
 						} else {
 							[_veh,0] remoteExecCall ["life_fnc_lockVehicle",_veh];
+
+							_veh animateDoor ["door_back_R",1];
+							_veh animateDoor ["door_back_L",1];
+							_veh animateDoor ['door_R',1];
+							_veh animateDoor ['door_L',1];
+							_veh animateDoor ['Door_L_source',1];
+							_veh animateDoor ['Door_rear',1];
+							_veh animateDoor ['Door_rear_source',1];
+							_veh animateDoor ['Door_1_source',1];
+							_veh animateDoor ['Door_2_source',1];
+							_veh animateDoor ['Door_3_source',1];
+							_veh animateDoor ['Door_LM',1];
+							_veh animateDoor ['Door_RM',1];
+							_veh animateDoor ['Door_LF',1];
+							_veh animateDoor ['Door_RF',1];
+							_veh animateDoor ['Door_LB',1];
+							_veh animateDoor ['Door_RB',1];
+							_veh animateDoor ['DoorL_Front_Open',1];
+							_veh animateDoor ['DoorR_Front_Open',1];
+							_veh animateDoor ['DoorL_Back_Open',1];
+							_veh animateDoor ['DoorR_Back_Open ',1];
 						};
 						systemChat localize "STR_MISC_VehUnlock";
 					} else {
 						if(local _veh) then {
 							_veh lock 2;
+
+							_veh animateDoor ["door_back_R",0];
+							_veh animateDoor ["door_back_L",0];
+							_veh animateDoor ['door_R',0];
+							_veh animateDoor ['door_L',0];
+							_veh animateDoor ['Door_L_source',0];
+							_veh animateDoor ['Door_rear',0];
+							_veh animateDoor ['Door_rear_source',0];
+							_veh animateDoor ['Door_1_source',0];
+							_veh animateDoor ['Door_2_source',0];
+							_veh animateDoor ['Door_3_source',0];
+							_veh animateDoor ['Door_LM',0];
+							_veh animateDoor ['Door_RM',0];
+							_veh animateDoor ['Door_LF',0];
+							_veh animateDoor ['Door_RF',0];
+							_veh animateDoor ['Door_LB',0];
+							_veh animateDoor ['Door_RB',0];
+							_veh animateDoor ['DoorL_Front_Open',0];
+							_veh animateDoor ['DoorR_Front_Open',0];
+							_veh animateDoor ['DoorL_Back_Open',0];
+							_veh animateDoor ['DoorR_Back_Open ',0];
 						} else {
 							[_veh,2] remoteExecCall ["life_fnc_lockVehicle",_veh];
+
+							_veh animateDoor ["door_back_R",0];
+							_veh animateDoor ["door_back_L",0];
+							_veh animateDoor ['door_R',0];
+							_veh animateDoor ['door_L',0];
+							_veh animateDoor ['Door_L_source',0];
+							_veh animateDoor ['Door_rear',0];
+							_veh animateDoor ['Door_rear_source',0];
+							_veh animateDoor ['Door_1_source',0];
+							_veh animateDoor ['Door_2_source',0];
+							_veh animateDoor ['Door_3_source',0];
+							_veh animateDoor ['Door_LM',0];
+							_veh animateDoor ['Door_RM',0];
+							_veh animateDoor ['Door_LF',0];
+							_veh animateDoor ['Door_RF',0];
+							_veh animateDoor ['Door_LB',0];
+							_veh animateDoor ['Door_RB',0];
+							_veh animateDoor ['DoorL_Front_Open',0];
+							_veh animateDoor ['DoorR_Front_Open',0];
+							_veh animateDoor ['DoorL_Back_Open',0];
+							_veh animateDoor ['DoorR_Back_Open ',0];
 						};
 						systemChat localize "STR_MISC_VehLock";
 					};

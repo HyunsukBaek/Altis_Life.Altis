@@ -2,9 +2,10 @@
 #define SPY_SETTINGS(TYPE,SETTING) TYPE(missionConfigFile >> "SpyGlass" >> SETTING)
 /*
 	File: fn_variableCheck.sqf
-	
+	Author:
+
 	Description:
-	Checks against harmful variables, disable this if client-performance is 
+	Checks against harmful variables, disable this if client-performance is
 	to bad in the fn_initSpy.sqf, the menuCheck should be good enough!
 */
 private["_BIS_Functions","_LIFE_Functions","_SERVER_Functions","_SOCK_Functions","_DB_Functions","_allowedVariables","_checkFunction","_BIS_UI_Functions","_allowedVariables_UI","_profileCount"];
@@ -20,9 +21,9 @@ _profileCount = count allVariables profileNameSpace;
 
 /* Build Player Slots because we name them and they are counted as variables */
 for "_i" from 1 to 125 do {
-	if(_i < SPY_SETTINGS(getNumber,"civSlotNumber")) then {_allowedVariables pushBack [format["civ_%1",_i],"OBJECT"]};
-	if(_i < SPY_SETTINGS(getNumber,"copSlotNumber")) then {_allowedVariables pushBack [format["cop_%1",_i],"OBJECT"]};
-	if(_i < SPY_SETTINGS(getNumber,"medSlotNumber")) then {_allowedVariables pushBack [format["medic_%2",_i],"OBJECT"]};
+	if(_i <= SPY_SETTINGS(getNumber,"civSlotNumber")) then {_allowedVariables pushBack [format["civ_%1",_i],"OBJECT"]};
+	if(_i <= SPY_SETTINGS(getNumber,"copSlotNumber")) then {_allowedVariables pushBack [format["cop_%1",_i],"OBJECT"]};
+	if(_i <= SPY_SETTINGS(getNumber,"medSlotNumber")) then {_allowedVariables pushBack [format["medic_%1",_i],"OBJECT"]};
 };
 
 /* First lets clear out the memory of potentially bad variables */
@@ -58,7 +59,7 @@ _checkFunction = {
 							_find = _allowedVariables find [_x,_varType];
 							if(EQUAL(_find,-1)) then {
 								diag_log format["Variable: %1 is not allowed TYPE: %2 NS: MN",_x,_varType];
-								//failMission "SpyGlass";
+								failMission "SpyGlass";
 							};
 						};
 					};
@@ -80,7 +81,7 @@ _uiCheckFunction = {
 								_find = _allowedVariables_UI find [_x,_varType];
 								if(EQUAL(_find,-1)) then {
 									diag_log format["Variable: %1 is not allowed TYPE: %2 NS: UI",_x,_varType];
-									//failMission "SpyGlass";
+									failMission "SpyGlass";
 								};
 							};
 						};

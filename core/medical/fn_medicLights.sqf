@@ -25,6 +25,14 @@ switch (typeOf _vehicle) do
 	{
 		_lightleft lightAttachObject [_vehicle, [-0.37, 0.0, 0.56]];
 	};
+	case "C_SUV_01_F":
+	{
+		_lightleft lightAttachObject [_vehicle, [-0.37,-1.2,0.43]];
+	};
+	case "C_Hatchback_01_F":
+	{
+		_lightleft lightAttachObject [_vehicle, [-0.35,-0.2,0.25]];
+	};
 };
 
 _lightleft setLightAttenuation [0.181, 0, 1000, 130]; 
@@ -35,7 +43,7 @@ _lightleft setLightUseFlare true;
 
 _lightright = "#lightpoint" createVehicle getpos _vehicle;   
 sleep 0.2;
-_lightright setLightColor _lightBlue; 
+_lightright setLightColor _lightRed; 
 _lightright setLightBrightness 0.2;  
 _lightright setLightAmbient [0.1,0.1,1]; 
 
@@ -44,6 +52,14 @@ switch (typeOf _vehicle) do
 	case "C_Offroad_01_F":
 	{
 		_lightright lightAttachObject [_vehicle, [0.37, 0.0, 0.56]];
+	};
+	case "C_SUV_01_F":
+	{
+		_lightright lightAttachObject [_vehicle, [0.37,-1.2,0.43]];
+	};
+	case "C_Hatchback_01_F":
+	{
+		_lightright lightAttachObject [_vehicle, [-0.35,-0.2,0.25]];
 	};
 };
   
@@ -68,7 +84,7 @@ while{ (alive _vehicle)} do
 		sleep 0.05;
 		_lightleft setLightBrightness 6;  
 	}  
-		else  
+	else  
 	{  
 		_leftRed = true;  
 		_lightleft setLightBrightness 0.0;  

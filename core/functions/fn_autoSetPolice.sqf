@@ -33,12 +33,10 @@ if (life_cash > 99999) then //100k
 	sleep 2;
 	//Arma id for weapons, clothes, ...
 	player addUniform "U_Rangemaster";
-	player addVest "V_TacVest_blk_POLICE";
+	player addVest "V_Rangemaster_belt";
 	player addBackpack "B_Bergen_blk";
 	player addHeadGear "H_Beret_blk_POLICE";
-	player addWeapon "arifle_MX_F"; //lethal
-	player addMagazine "30Rnd_65x39_caseless_mag";
-	player addMagazine "30Rnd_65x39_caseless_mag";
+	player addWeapon "arifle_MXC_Holo_pointer_snds_F"; //lethal
 	player addMagazine "30Rnd_65x39_caseless_mag";
 	player addMagazine "30Rnd_65x39_caseless_mag";
 	player addMagazine "30Rnd_65x39_caseless_mag";
@@ -48,16 +46,11 @@ if (life_cash > 99999) then //100k
 	player addMagazine "16Rnd_9x21_Mag";
 	player addMagazine "16Rnd_9x21_Mag";
 	player addMagazine "16Rnd_9x21_Mag";
-	player addWeapon "NVGoggles"; // 
-	player addItem "ToolKit"; // 
-	player addItem "FirstAidKit"; // 
-	player addItem "FirstAidKit"; // 
-	player addItem "Medikit"; // 
+	player addWeapon "NVGoggles"; // silencer
+	player addItem "ToolKit"; // silencer
+	player addItem "FirstAidKit"; // silencer
+	player addItem "FirstAidKit"; // silencer
 	//Virtual items, who knows might be used... -check config_master
-	player addItem "redgull";
-	player assignItem  "redgull";
-	player addItem "tbacon";
-	player assignItem  "tbacon";
 	player addItem "redgull";
 	player assignItem  "redgull";
 	player addItem "tbacon";

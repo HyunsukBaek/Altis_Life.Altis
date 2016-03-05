@@ -75,7 +75,6 @@ class Life_Client_Core
 		class repairTruck {};
 		class serviceChopper {};
 		class catchFish {};
-		class catchTurtle {};
 		class dpFinish {};
 		class dropFishingNet {};
 		class getDPMission {};
@@ -158,6 +157,7 @@ class Life_Client_Core
 		class s_onChar {};
 		class s_onCheckedChange {};
 		class wantedAddP {};
+		class altisPhone {};
 	};
 
 	class Functions
@@ -205,15 +205,24 @@ class Life_Client_Core
 		class nearATM {};
 		class playerSkins {};
 		class nearestObjects {};
+		class teleport {};
+		class searchPosEmpty {};
 		class autoSetPolice {};
+	};
+
+	class Travis_Phone
+	{
+		file = "dialog\CustomPhone\Functions";
+		class movesMenu {};
+		class openInvMenu {};
+		class openLicensesMenu {};
+		class openBankMenu {};
 	};
 
 	class Network
 	{
 		file = "core\functions\network";
 		class broadcast {};
-		class MP {};
-		class MPexec {};
 		class corpse {};
 		class jumpFnc {};
 		class soundDevice {};
@@ -253,6 +262,9 @@ class Life_Client_Core
 		class deviceMine {};
 		class addVehicle2Chain {};
 		class FuelRefuelcar {};
+		class vehiclecolor3DRefresh {};
+		class fuelSupply {};
+		class fuelStore {};
 	};
 
 	class Cop
@@ -283,6 +295,8 @@ class Life_Client_Core
 		class ticketPaid {};
 		class containerInvSearch {};
 		class wantedGrab {};
+		class showArrestDialog {};
+		class arrestDialog_Arrest {};
 	};
 
 	class Gangs
@@ -318,6 +332,7 @@ class Life_Client_Core
 		class weaponShopSelection {};
 		class weaponShopBuySell {};
 		class weaponShopMags {};
+		class weaponShopAccs {};
 		class virt_buy {};
 		class virt_menu {};
 		class virt_update {};
@@ -327,12 +342,14 @@ class Life_Client_Core
 		class chopShopSell {};
 		class FuelStatOpen {};
 		class FuelLBchange {};
+		class vehicleShopEnd3DPreview {};
+		class vehicleShopInit3DPreview {};
+		class vehicleShop3DPreview {};
 	};
 
 	class Items
 	{
 		file = "core\items";
-		class pickaxeUse {};
 		class lockpick {};
 		class spikeStrip {};
 		class jerryRefuel {};

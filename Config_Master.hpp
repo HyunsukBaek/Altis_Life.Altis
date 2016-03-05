@@ -5,19 +5,90 @@
     Master settings for various features and functionality
 */
 class Life_Settings {
-    /* Persistent Settings */
+    /* Persistent Player Settings */
     save_civ_weapons = true; //Allow civilians to save weapons on them?
     save_virtualItems = true; //Save Virtual items (all sides)?
-    save_playerStats = true; //Save food & water (all sides)?
+    save_playerStats = true; //Save food, water and damage (all sides)?
+	
+    /* Persistent Vehicle Settings */
     save_veh_virtualItems = true; //Save Virtual items for vehicles (all sides)?
     save_veh_gear = true; //Save Gear for vehicles (all sides)?
+    save_veh_fuel = true; // Save Vehicle fuel state
+    save_veh_damage = true; //Save Vehicle Damage
+    save_veh_items[] = {
+		/*"pickaxe","fuelEmpty", "fuelFull", "spikeStrip", "lockpick", "defuseKit","storageSmall","storageBig","redgull","coffee","waterBottle","apple","peach","tbacon","donuts","rabbit","salema","ornate","mackerel","tuna","mullet","catshark","turtle_soup","hen","rooster","sheep","goat"*/
+       		"apple", "blastingcharge", "boltcutter", "cannabis", "catshark", "catshark_raw", 
+		"cement", "cocaine_processed", "cocaine_unprocessed", "coffee", "copper_refined", "copper_unrefined",
+		"defusekit", "diamond_cut", "diamond_uncut", "donuts", "fuelEmpty",
+		"fuelFull", "glass", "goat", "goat_raw", "goldbar",
+		"hen", "hen_raw", "heroin_processed", "heroin_unprocessed", "iron_refined",
+		"iron_unrefined", "lockpick", "mackerel", "mackerel_raw", "marijuana",
+		"mullet", "mullet_raw", "oil_processed", "oil_unprocessed", "ornate",
+		"ornate_raw", "peach", "pickaxe", "rabbit", "rabbit_raw",
+		"redgull", "rock", "rooster", "rooster_raw", "salema",
+		"salema_raw", "salt_refined", "salt_unrefined", "sand", "sheep",	
+		"sheep_raw", "spikeStrip", "tbacon", "tuna", "tuna_raw", 
+		"turtle_raw", "turtle_soup", "waterBottle"
+    };// define which virtual items to save in vehicles.
 
     /* Clothing related settings */
     clothing_box = true; //true = preview inside a black box.  false = preview on map.
-    clothing_masks[] = { "H_Shemag_olive", "H_Shemag_khk", "H_Shemag_tan", "H_Shemag_olive_hs", "H_ShemagOpen_khk", "H_ShemagOpen_tan", "G_Balaclava_blk", "G_Balaclava_combat", "G_Balaclava_lowprofile", "G_Balaclava_oli", "G_Bandanna_aviator", "G_Bandanna_beast", "G_Bandanna_blk", "G_Bandanna_khk", "G_Bandanna_oli", "G_Bandanna_shades", "G_Bandanna_sport", "G_Bandanna_tan", "U_O_GhillieSuit", "U_I_GhillieSuit", "U_B_GhillieSuit", "H_RacingHelmet_1_black_F", "H_RacingHelmet_1_red_F", "H_RacingHelmet_1_white_F", "H_RacingHelmet_1_blue_F", "H_RacingHelmet_1_yellow_F", "H_RacingHelmet_1_green_F", "H_RacingHelmet_1_F", "H_RacingHelmet_2_F", "H_RacingHelmet_3_F", "H_RacingHelmet_4_F" };
+    clothing_masks[] = { 
+        "H_Shemag_olive",
+        "H_Shemag_khk",
+        "H_Shemag_tan",
+        "H_Shemag_olive_hs",
+        "H_ShemagOpen_khk",
+        "H_ShemagOpen_tan",
+        "H_RacingHelmet_1_black_F",
+        "H_RacingHelmet_1_red_F", 
+        "H_RacingHelmet_1_white_F",
+        "H_RacingHelmet_1_blue_F",
+        "H_RacingHelmet_1_yellow_F",
+        "H_RacingHelmet_1_green_F",
+        "H_RacingHelmet_1_F",
+        "H_RacingHelmet_2_F",
+        "H_RacingHelmet_3_F",
+        "H_RacingHelmet_4_F",
+        "H_HelmetO_ocamo",
+        "H_MilCap_oucamo",
+        "H_Bandanna_camo",
+        "G_Balaclava_blk",
+        "G_Balaclava_combat",
+        "G_Balaclava_lowprofile",
+        "G_Balaclava_oli",
+        "G_Bandanna_aviator",
+        "G_Bandanna_beast",
+        "G_Bandanna_blk",
+        "G_Bandanna_khk",
+        "G_Bandanna_oli",
+        "G_Bandanna_shades",
+        "G_Bandanna_sport",
+        "G_Bandanna_tan",
+        "U_O_GhillieSuit",
+        "U_I_GhillieSuit",
+        "U_B_GhillieSuit",
+        "U_C_Driver_1_black",
+        "U_C_Driver_1_blue",
+        "U_C_Driver_1_red",
+        "U_C_Driver_1_orange",
+        "U_C_Driver_1_green",
+        "U_C_Driver_1_white",
+        "U_C_Driver_1_yellow",
+        "U_C_Driver_2", 
+        "U_C_Driver_1", 
+        "U_C_Driver_3", 
+        "U_C_Driver_4",
+        "U_IG_Guerilla1_1",
+        "U_I_G_Story_Protagonist_F",
+        "U_I_G_resistanceLeader_F",
+        "U_O_SpecopsUniform_ocamo",
+        "U_O_PilotCoveralls",
+        "U_IG_leader"        
+    };
 
     /* Cop related settings */
-    cops_online_min = 3; //minimum cops online for robbing a bank
+    cops_online_min = 4; //minimum cops online for robbing a bank
 
     /* Medic related settings*/
     allow_medic_weapons = true; // true allows medics to hold/use weapons - false disallows
@@ -50,7 +121,7 @@ class Life_Settings {
     bank_med = 70000; //Amount of cash on bank for new medics
 
     /* Paycheck Amount */
-    paycheck_cop = 10000; //Payment for cops
+    paycheck_cop = 8000; //Payment for cops
     paycheck_civ = 800; //Payment for civillians
     paycheck_med = 4500; //Payment for medics
 
@@ -63,17 +134,30 @@ class Life_Settings {
     /* ATM settings */
     global_ATM = true; //Allow users to access any ATM on the map.
 
-    /* Pump settings */
-    Pump_service = true; //Allow users to use pump service on the map. Default = false
+    /* Fuel Station & Heli Service settings */
+    Pump_service = false; //Allow users to use pump service on the map. Default = false
+    fuel_cost = 80; //Cost of fuel per liter at fuel stations (if not defined for the vehicle already).
+    service_chopper = 1000; //Cost to service chopper at chopper service station.
 
     /* Skins settings */
     civ_skins = false; //Enable or disable civilian skins. Before enabling, you must add all the SEVEN files to textures folder. (It must be named as: civilian_uniform_1.jpg, civilian_uniform_2.jpg...civilian_uniform_6.jpg, civilian_uniform_7.jpg)
 
-    /* Car-shop Settings */
-    vehicleShop_rentalOnly[] = { "B_G_Offroad_01_armed_F" };
+    /* Vehicle Settings */
+    vehicleShop_rentalOnly[] = { "B_Boat_Armed_01_minigun_F" };
+    vehicleShop_BuyMultiplicator = 1.5;
+    vehicleGarage_SellMultiplicator = 0.75;
+    vehicleGarage_StorFeeMultiplicator = 0.2;
+    vehicleChopShop_Multiplicator = 0.5;
 
     /* Job-related stuff */
     delivery_points[] = { "dp_1", "dp_2", "dp_3", "dp_4", "dp_5", "dp_6", "dp_7", "dp_8", "dp_9", "dp_10", "dp_11", "dp_12", "dp_13", "dp_14", "dp_15", "dp_15", "dp_16", "dp_17", "dp_18", "dp_19", "dp_20", "dp_21", "dp_22", "dp_23", "dp_24", "dp_25" };
+
+    /* FuelTank Mission */
+    FuelTank_WinMultiplier = 1; //Win Multiplier in FuelTank Missions. Increase for more Money! Default = 1
+
+    /* Animal settings */
+    animaltypes_fish[] = { "Salema_F", "Ornate_random_F", "Mackerel_F", "Tuna_F", "Mullet_F", "CatShark_F", "Turtle_F" };
+    animaltypes_hunting[] = { "Sheep_random_F", "Goat_random_F", "Hen_random_F", "Cock_random_F", "Rabbit_F" };
 
     /* Wanted System related settings */
     /* crimes[] = {String, Bounty, Code} */
@@ -130,3 +214,4 @@ class Life_Settings {
 #include "Config_Vehicles.hpp"
 #include "Config_vItems.hpp"
 #include "Config_Weapons.hpp"
+#include "Config_Gather.hpp"
