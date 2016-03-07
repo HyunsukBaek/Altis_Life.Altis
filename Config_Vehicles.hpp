@@ -734,9 +734,7 @@ will modify the virtual space and the price of the vehicle, but other informatio
 	licenses[] = { {"pilot" }, {""}, {"mAir"}, {""} };
 	rentalprice[] = { 750000, -1, 600000, -1 };
 	textures[] = {
-//                { "Black", "cop", {
-//                    "\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_co.paa"
-//                } },
+//
 //                { "White / Blue", "civ", {
 //                    "\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_civilian_co.paa"
 //                } },
@@ -758,6 +756,9 @@ will modify the virtual space and the price of the vehicle, but other informatio
 		"\a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_1_dahoman_co.paa",
 		"\a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_2_dahoman_co.paa",
 		"\a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_3_dahoman_co.paa"
+	    } },
+	    { "Black", "cop", {
+	        "\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_co.paa"
 	    } }
 	};
     };
