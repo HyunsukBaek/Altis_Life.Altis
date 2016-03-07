@@ -203,21 +203,21 @@ class LifeCfgVehicles {
     class B_Heli_Transport_01_F {
          vItemSpace = 200;
          licenses[] = { {""}, {"cAir"}, {""}, {""} };
-         rentalprice[] = { -1, 200000, -1, -1 };
+         rentalprice[] = { -1, 400000, -1, -1 };
          textures[] = {};
     };
 
      class I_Heli_light_03_F {
  	vItemSpace = 200;
  	licenses[] = { {""}, {"cAir"}, {""}, {""} };
- 	rentalprice[] = { -1, 300000, -1, -1 };
+ 	rentalprice[] = { -1, 500000, -1, -1 };
  	textures[] = {};
     };
 
      class O_Heli_Light_02_v2_F {
  	vItemSpace = 200;
  	licenses[] = { {""}, {"cAir"}, {""}, {""} };
- 	rentalprice[] = { -1, 400000, -1, -1 };
+ 	rentalprice[] = { -1, 600000, -1, -1 };
  	textures[] = {};
     };
 
@@ -731,8 +731,8 @@ will modify the virtual space and the price of the vehicle, but other informatio
 
     class I_Heli_Transport_02_F {
 	vItemSpace = 305;
-	licenses[] = { {"pilot" }, {""}, {"mAir"}, {""} };
-	rentalprice[] = { 750000, -1, 600000, -1 };
+	licenses[] = { {"pilot" }, {"cAir"}, {"mAir"}, {""} };
+	rentalprice[] = { 750000, 400000, 600000, -1 };
 	textures[] = {
 //
 //                { "White / Blue", "civ", {
