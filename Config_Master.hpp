@@ -13,7 +13,7 @@ class Life_Settings {
     /* Persistent Vehicle Settings */
     save_veh_virtualItems = true; //Save Virtual items for vehicles (all sides)?
     save_veh_gear = true; //Save Gear for vehicles (all sides)?
-    save_veh_fuel = true; // Save Vehicle fuel state
+    save_veh_fuel = true; //Save Vehicle fuel state
     save_veh_damage = true; //Save Vehicle Damage
     save_veh_items[] = {
 		/*"pickaxe","fuelEmpty", "fuelFull", "spikeStrip", "lockpick", "defuseKit","storageSmall","storageBig","redgull","coffee","waterBottle","apple","peach","tbacon","donuts","rabbit","salema","ornate","mackerel","tuna","mullet","catshark","turtle_soup","hen","rooster","sheep","goat"*/
@@ -136,7 +136,7 @@ class Life_Settings {
 
     /* Fuel Station & Heli Service settings */
     Pump_service = false; //Allow users to use pump service on the map. Default = false
-    fuel_cost = 120; //Cost of fuel per liter at fuel stations (if not defined for the vehicle already).
+    fuel_cost = 150; //Cost of fuel per liter at fuel stations (if not defined for the vehicle already).
     service_chopper = 1000; //Cost to service chopper at chopper service station.
 
     /* Skins settings */

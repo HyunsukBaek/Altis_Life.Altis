@@ -122,11 +122,16 @@ class CarShops {
     class cop_air {
         side = "cop";
         vehicles[] = {
-            { "B_Heli_Light_01_F", { "", "", -1 } },
+	    { "B_Heli_Light_01_F", { "", "", -1 } },
 	    { "B_Heli_Transport_03_unarmed_F", { "", "", -1 } },
-            { "B_Heli_Transport_01_F", { "life_coplevel", "SCALAR", 2 } },
+	    { "B_Heli_Transport_01_F", { "life_coplevel", "SCALAR", 2 } },
+	    { "O_Heli_Light_02_unarmed_F", { "life_coplevel", "SCALAR", 2 } },
+	    { "I_Heli_Transport_02_F", { "life_coplevel", "SCALAR", 2 } },
+	    { "I_Heli_light_03_F", { "life_coplevel", "SCALAR", 2 } },
+	    { "O_Heli_Light_02_v2_F", { "life_coplevel", "SCALAR", 3 } },
 	    { "B_Heli_Light_01_armed_F", { "life_coplevel", "SCALAR", 3 } },
-	    { "B_Heli_Attack_01_F", { "life_coplevel", "SCALAR", 4 } }
+	    { "B_Heli_Attack_01_F", { "life_coplevel", "SCALAR", 4 } },
+	    { "O_Heli_Attack_02_black_F", { "life_coplevel", "SCALAR", 4 } }
         };
     };
 
@@ -196,10 +201,31 @@ class LifeCfgVehicles {
     };
 
     class B_Heli_Transport_01_F {
-        vItemSpace = 200;
-        licenses[] = { {""}, {"cAir"}, {""}, {""} };
-        rentalprice[] = { -1, 200000, -1, -1 };
-        textures[] = {};
+         vItemSpace = 200;
+         licenses[] = { {""}, {"cAir"}, {""}, {""} };
+         rentalprice[] = { -1, 200000, -1, -1 };
+         textures[] = {};
+    };
+
+     class I_Heli_light_03_F {
+ 	vItemSpace = 200;
+ 	licenses[] = { {""}, {"cAir"}, {""}, {""} };
+ 	rentalprice[] = { -1, 300000, -1, -1 };
+ 	textures[] = {};
+    };
+
+     class O_Heli_Light_02_v2_F {
+ 	vItemSpace = 200;
+ 	licenses[] = { {""}, {"cAir"}, {""}, {""} };
+ 	rentalprice[] = { -1, 400000, -1, -1 };
+ 	textures[] = {};
+    };
+
+     class O_Heli_Attack_02_black_F {
+     	vItemSpace = 200;
+     	licenses[] = { {""}, {"cAir"}, {""}, {""} };
+     	rentalprice[] = { -1, 1200000, -1, -1 };
+     	textures[] = {};
     };
     
     class B_MRAP_01_hmg_F {
