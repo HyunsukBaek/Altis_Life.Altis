@@ -179,8 +179,8 @@ class VirtualItems {
         variable = "fuelFull";
         displayName = "STR_Item_FuelF";
         weight = 5;
-        buyPrice = 850;
-        sellPrice = 500;
+        buyPrice = 1850;
+        sellPrice = 1500;
         illegal = false;
         edible = -1;
         icon = "icons\ico_fuel.paa";
@@ -388,7 +388,7 @@ class VirtualItems {
     class diamond_uncut {
         variable = "diamondUncut";
         displayName = "STR_Item_DiamondU";
-        weight = 5;
+        weight = 6;
         buyPrice = -1;
         sellPrice = 750;
         illegal = false;
@@ -479,7 +479,7 @@ class VirtualItems {
     class cocaine_unprocessed {
         variable = "cocaineUnprocessed";
         displayName = "STR_Item_CocaineU";
-        weight = 5;
+        weight = 6;
         buyPrice = -1;
         sellPrice = -1;
         illegal = true;
@@ -491,7 +491,7 @@ class VirtualItems {
     class cocaine_processed {
         variable = "cocaineProcessed";
         displayName = "STR_Item_CocaineP";
-        weight = 4;
+        weight = 5;
         buyPrice = -1;
         sellPrice = 6500;
         illegal = true;
