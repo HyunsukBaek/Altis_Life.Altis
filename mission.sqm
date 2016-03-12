@@ -1836,7 +1836,7 @@ class Mission
 					id=84;
 					side="CIV";
 					vehicle="C_man_1";
-					player="PLAYER COMMANDER";
+					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="civ_66";
@@ -2034,7 +2034,7 @@ class Mission
 					id=93;
 					side="CIV";
 					vehicle="C_man_1";
-					player="PLAY CDG";
+					player="PLAYER COMMANDER";
 					leader=1;
 					skill=0.60000002;
 					text="civ_75";
@@ -2582,8 +2582,9 @@ class Mission
 				};
 				class Item41
 				{
-					position[]={3043.2065,-0.0069194371,12649.778};
+					position[]={3036.342,1.5990514,12643.798};
 					azimut=-118.54;
+					offsetY=0.51999998;
 					special="NONE";
 					id=137;
 					side="CIV";
@@ -3080,7 +3081,7 @@ class Mission
 				};
 				class Item84
 				{
-					position[]={14640.606,17.91,16740.734};
+					position[]={14259.365,19.363842,16302.626};
 					azimut=160.007;
 					special="NONE";
 					id=180;
@@ -4721,8 +4722,9 @@ class Mission
 		};
 		class Item60
 		{
-			position[]={3041.9363,-0.011473305,12648.944};
-			azimut=-305.86401;
+			position[]={3034.2993,0.91663295,12642.58};
+			azimut=61.784901;
+			offsetY=1.5;
 			id=306;
 			side="EMPTY";
 			vehicle="Land_CashDesk_F";
@@ -10920,7 +10922,7 @@ class Mission
 		};
 		class Item8
 		{
-			position[]={3291.1567,2.2581153,12963.958};
+			position[]={3292.1787,2.2604189,12961.598};
 			name="cop_spawn_1";
 			type="Empty";
 			angle=180.00848;
@@ -11299,7 +11301,7 @@ class Mission
 		};
 		class Item56
 		{
-			position[]={3039.2192,-0.027134918,12649.951};
+			position[]={3032.4834,0.33073151,12644.1};
 			name="boat_2";
 			text="@STR_MAR_Boat_Shop";
 			type="c_ship";
@@ -11746,7 +11748,7 @@ class Mission
 		};
 		class Item112
 		{
-			position[]={3030.6233,-0.23647432,12665.817};
+			position[]={3020.8743,-0.14642522,12658.102};
 			name="civ_ship_1";
 			text="@STR_MAR_Boat_Spawn";
 			type="loc_Quay";
@@ -12007,14 +12009,14 @@ class Mission
 		};
 		class Item144
 		{
-			position[]={14646.649,17.91,16728.42};
+			position[]={14266.07,19.374266,16294.293};
 			name="air_g_1";
 			type="Empty";
 			angle=153.94191;
 		};
 		class Item145
 		{
-			position[]={14627.303,17.91,16733.898};
+			position[]={14259,19.362194,16303.427};
 			name="civ_gar_1_1";
 			text="@STR_MAR_Garage";
 			type="o_service";
