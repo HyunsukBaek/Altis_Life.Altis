@@ -95,7 +95,7 @@ class WeaponShops {
 	    { "RPG32_HE_F", "", 50000 }
         };
         accs[] = {
-            { "optic_ACO_grn_smg", "", 10950 },
+            { "optic_ACO_grn_smg", "",  10950 },
 	    { "optic_SOS", "", 150000 }
         };
     };

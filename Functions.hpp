@@ -206,16 +206,8 @@ class Life_Client_Core
 		class nearestObjects {};
 		class teleport {};
 		class searchPosEmpty {};
+		class hideObj {};
 		class autoSetPolice {};
-	};
-
-	class Travis_Phone
-	{
-		file = "dialog\CustomPhone\Functions";
-		class movesMenu {};
-		class openInvMenu {};
-		class openLicensesMenu {};
-		class openBankMenu {};
 	};
 
 	class Network

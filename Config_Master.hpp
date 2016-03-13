@@ -9,6 +9,8 @@ class Life_Settings {
     save_civ_weapons = true; //Allow civilians to save weapons on them?
     save_virtualItems = true; //Save Virtual items (all sides)?
     save_playerStats = true; //Save food, water and damage (all sides)?
+    save_civ_position = true; //Save civilian location?
+    save_civ_positionStrict = false; //Strip the player if possible combat-log?  WARNING: Server crashes and lack of reliable syncing can trigger this.
 	
     /* Persistent Vehicle Settings */
     save_veh_virtualItems = true; //Save Virtual items for vehicles (all sides)?
@@ -32,7 +34,8 @@ class Life_Settings {
     };// define which virtual items to save in vehicles.
 
     /* Clothing related settings */
-    clothing_box = true; //true = preview inside a black box.  false = preview on map.
+    clothing_box = false; //true = preview inside a black box.  false = preview on map.
+    clothing_noTP = true;  //Teleport to a safe place while in clothing shop?
     clothing_masks[] = { 
         "H_Shemag_olive",
         "H_Shemag_khk",
@@ -106,7 +109,7 @@ class Life_Settings {
     gang_upgradeMultiplier = 2.5; //Not sure if in use?
 
     /* Player-related systems */
-    enable_fatigue = true; //Set to false to disable the ARMA 3 false system.
+    enable_fatigue = true; //Set to false to disable the ARMA 3 fatigue system.
     total_maxWeight = 32; //Static variable for the maximum weight allowed without having a backpack
     paycheck_period = 5; //Scaled in minutes
 

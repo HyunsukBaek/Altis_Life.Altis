@@ -46,7 +46,7 @@ if(EQUAL(typeName life_garage_sp,typeName [])) then {
 	if(life_garage_sp in ["medic_spawn_1","medic_spawn_2","medic_spawn_3"]) then {
 	
 		if(life_HC_isActive) then {
-			[_vid,_pid,life_garage_sp,_unit,_price,_spawntext] remoteExec ["HC_fnc_spawnVehicle",HC_Life];
+			[_vid,_pid,life_garage_sp,_unit,_price,0,_spawntext] remoteExec ["HC_fnc_spawnVehicle",HC_Life];
 		} else {
 			[_vid,_pid,life_garage_sp,_unit,_price,_spawntext] remoteExec ["TON_fnc_spawnVehicle",RSERV];
 		};

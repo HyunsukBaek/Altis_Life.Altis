@@ -586,7 +586,7 @@ class VirtualItems {
         sellPrice = 95;
         illegal = false;
         edible = -1;
-        icon = "icons\ico_meat.paa";
+        icon = "icons\ico_rabbitRaw.paa";
     };
 
     class rabbit {
@@ -597,7 +597,7 @@ class VirtualItems {
         sellPrice = 215;
         illegal = false;
         edible = 20;
-        icon = "icons\ico_cookedMeat.paa";
+        icon = "icons\ico_rabbit.paa";
     };
 
     class salema_raw {
@@ -729,7 +729,7 @@ class VirtualItems {
         sellPrice = 1500;
         illegal = false;
         edible = 100;
-        icon = "icons\ico_catShark.paa";
+        icon = "icons\ico_cookedFish.paa";
     };
 
     class turtle_raw {
@@ -740,7 +740,7 @@ class VirtualItems {
         sellPrice = 20000;
         illegal = true;
         edible = -1;
-        icon = "icons\ico_meat.paa";
+        icon = "icons\ico_turtleRaw.paa";
     };
 
     class turtle_soup {
@@ -751,7 +751,7 @@ class VirtualItems {
         sellPrice = 8750;
         illegal = false;
         edible = 100;
-        icon = "icons\ico_cookedMeat.paa";
+        icon = "icons\ico_turtleSoup.paa";
     };
 
     class hen_raw {
@@ -762,7 +762,7 @@ class VirtualItems {
         sellPrice = 65;
         illegal = false;
         edible = -1;
-        icon = "icons\ico_meat.paa";
+        icon = "icons\ico_wholeChickenRaw.paa";
     };
 
     class hen {
@@ -773,7 +773,7 @@ class VirtualItems {
         sellPrice = 850;
         illegal = false;
         edible = 65;
-        icon = "icons\ico_cookedMeat.paa";
+        icon = "icons\ico_wholeChicken.paa";
     };
 
     class rooster_raw {
@@ -784,7 +784,7 @@ class VirtualItems {
         sellPrice = 650;
         illegal = false;
         edible = -1;
-        icon = "icons\ico_meat.paa";
+        icon = "icons\ico_chickenDrumstickRaw.paa";
     };
 
     class rooster {
@@ -795,7 +795,7 @@ class VirtualItems {
         sellPrice = 850;
         illegal = false;
         edible = 45;
-        icon = "icons\ico_cookedMeat.paa";
+        icon = "icons\ico_chickenDrumstick.paa";
     };
 
     class sheep_raw {
@@ -806,7 +806,7 @@ class VirtualItems {
         sellPrice = 950;
         illegal = false;
         edible = -1;
-        icon = "icons\ico_meat.paa";
+        icon = "icons\ico_lambChopRaw.paa";
     };
 
     class sheep {
@@ -817,7 +817,7 @@ class VirtualItems {
         sellPrice = 1150;
         illegal = false;
         edible = 100;
-        icon = "icons\ico_cookedMeat.paa";
+        icon = "icons\ico_lambChop.paa";
     };
 
     class goat_raw {
@@ -828,7 +828,7 @@ class VirtualItems {
         sellPrice = 1150;
         illegal = false;
         edible = -1;
-        icon = "icons\ico_meat.paa";
+        icon = "icons\ico_muttonLegRaw.paa";
     };
 
     class goat {
@@ -839,6 +839,6 @@ class VirtualItems {
         sellPrice = 1350;
         illegal = false;
         edible = 100;
-        icon = "icons\ico_cookedMeat.paa";
+        icon = "icons\ico_muttonLeg.paa";
     };
 };

@@ -16,6 +16,7 @@ class Header
 	maxPlayers = 75;
 };
 
+
 wreckLimit = 3;
 wreckRemovalMinTime = 60;
 wreckRemovalMaxTime = 320;
@@ -115,6 +116,18 @@ class CfgDebriefing
 		picture = "";
 		pictureColor[] = {0,0.3,0.6,1};
 	};
+};
+
+
+class Params
+{
+       // paramsArray[0]
+          class initialWeatherParam {
+          title = "Starting Weather";
+          values[] = {0,1,2,3,4};
+          texts[] = {"Clear","Overcast","Rain","Fog","Random"};
+          default = 0;
+       };
 };
 
 class CfgNotifications
