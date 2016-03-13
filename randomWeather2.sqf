@@ -71,8 +71,8 @@ mb_fnc_InitialWeather = {
 	
 	waitUntil {!isNil "rw2_Current_Weather"};
 	_weatherInitialArray = weatherTemplates select rw2_Current_Weather;
-    weatherCurrentName = _weatherInitialArray select 2;
-    _weatherInitialSettings = _weatherInitialArray select 0;
+    weatherCurrentName = _weatherInitialArray select 0;
+    _weatherInitialSettings = _weatherInitialArray select 2;
 
     _weatherInitialOvercast = _weatherInitialSettings select 0;
     _weatherInitialRainSnow = _weatherInitialSettings select 1;
@@ -100,13 +100,13 @@ mb_fnc_UpdateWeather = {
 	weatherCurrentName = _weatherCurrentArray select 0;
 	_weatherNextArray = weatherTemplates select rw2_Next_Weather;
 	weatherNextName = _weatherNextArray select 0;
-	_weatherNextSettings = _weatherNextArray select 0;
+	_weatherNextSettings = _weatherNextArray select 2;
 
 	_weatherNextOvercast = _weatherNextSettings select 0;
-	_weatherNextRainSnow = _weatherNextSettings select 0;
-	_weatherNextFog = _weatherNextSettings select 0;
-	_weatherNextWindEW = _weatherNextSettings select 0;
-	_weatherNextWindNS = _weatherNextSettings select 0;	
+	_weatherNextRainSnow = _weatherNextSettings select 1;
+	_weatherNextFog = _weatherNextSettings select 2;
+	_weatherNextWindEW = _weatherNextSettings select 3;
+	_weatherNextWindNS = _weatherNextSettings select 4;	
 
 	if (overcast < _weatherNextOvercast) then {0 setOvercast 1;} else {0 setOvercast 0;};
     1200 setRain _weatherNextRainSnow;
@@ -123,14 +123,13 @@ private ["_weatherUpdateArray","_weatherUpdateForecasts"];
         rw2_Current_Weather = floor(random(count(weatherTemplates)));
 		} else {
         initialWeatherParam = (paramsArray select rw2Param);
-		/*switch (initialWeatherParam) do{
+		switch (initialWeatherParam) do{
 			case 0: {rw2_Current_Weather = 0;};    										// Clear
             case 1: {rw2_Current_Weather = 1;};    										// Overcast
             case 2: {rw2_Current_Weather = 2 + (floor (random 3));};  					// Rain
             case 3: {rw2_Current_Weather = 5 + (floor (random 3));};  				 	// Fog
             case 4: {rw2_Current_Weather = floor(random(count(weatherTemplates)));};	// Random
-        };*/
-		rw2_Current_Weather = 0;
+        };
 	};
 	// Send out Initial Weather Variable
 	publicVariable "rw2_Current_Weather";
