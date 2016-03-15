@@ -83,6 +83,13 @@ class CfgSounds
 		sound[] = {"\sounds\harvest.ogg", 1.0, 1};
 		titles[] = {};
 	};
+	
+	class carlock 
+	{ 
+		name = "carlock";    
+		sound[] = {"\sounds\carlock.ogg", 1.0, 1};    
+		titles[] = {};  
+	}; 	
 };
 
 class CfgDebriefing

@@ -304,6 +304,7 @@ switch (_code) do {
 							_veh animateDoor ['DoorR_Back_Open ',1];
 						};
 						systemChat localize "STR_MISC_VehUnlock";
+						player say3D "carlock";
 					} else {
 						if(local _veh) then {
 							_veh lock 2;
@@ -353,6 +354,7 @@ switch (_code) do {
 							_veh animateDoor ['DoorR_Back_Open ',0];
 						};
 						systemChat localize "STR_MISC_VehLock";
+						player say3D "carlock";	
 					};
 				};
 			};

@@ -139,7 +139,7 @@ class Life_Settings {
 
     /* Fuel Station & Heli Service settings */
     Pump_service = false; //Allow users to use pump service on the map. Default = false
-    fuel_cost = 150; //Cost of fuel per liter at fuel stations (if not defined for the vehicle already).
+    fuel_cost = 200; //Cost of fuel per liter at fuel stations (if not defined for the vehicle already).
     service_chopper = 1000; //Cost to service chopper at chopper service station.
 
     /* Skins settings */
@@ -153,7 +153,7 @@ class Life_Settings {
     vehicleChopShop_Multiplicator = 0.5;
 
     /* Job-related stuff */
-    delivery_points[] = { "dp_1", "dp_2", "dp_3", "dp_4", "dp_5", "dp_6", "dp_7", "dp_8", "dp_9", "dp_10", "dp_11", "dp_12", "dp_13", "dp_14", "dp_15", "dp_15", "dp_16", "dp_17", "dp_18", "dp_19", "dp_20", "dp_21", "dp_22", "dp_23", "dp_24", "dp_25" };
+    delivery_points[] = { "dp_1", "dp_2", "dp_3", "dp_4", "dp_5", "dp_6", "dp_7", "dp_8", "dp_9", "dp_10", "dp_11", "dp_12", "dp_13", "dp_14", "dp_15", "dp_15", "dp_16", "dp_17", "dp_18", "dp_19", "dp_20", "dp_21", "dp_22", "dp_23", "dp_24", "dp_25", "dp_26", "dp_27" };
 
     /* FuelTank Mission */
     FuelTank_WinMultiplier = 1; //Win Multiplier in FuelTank Missions. Increase for more Money! Default = 1
