@@ -86,6 +86,7 @@ class CarShops {
             { "C_Offroad_01_F", { "", "", -1 } },
             { "C_SUV_01_F", { "", "", -1 } },
             { "C_Hatchback_01_F", { "", "", -1 } },
+	    { "C_Hatchback_01_sport_F", { "", "", -1 } },
 	    { "C_Van_01_box_F", { "", "", -1 } },
             { "I_Truck_02_medical_F", { "", "", -1 } },
             { "B_Truck_01_medical_F", { "", "", -1 } }
@@ -542,7 +543,8 @@ will modify the virtual space and the price of the vehicle, but other informatio
                 "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport05_co.paa"
             } },
 	    { "monster_WRC", "civ", {"textures\cars\civ_monsterwrc_hb.paa"} },
-	    { "LAPD", "cop", {"textures\cop\lapd_hatchback.paa"} }
+	    { "LAPD", "cop", {"textures\cop\lapd_hatchback.paa"} },
+	    { "EMS London", "med", {"textures\ems\paramedic_hb.paa"} }
         };
     };
 

@@ -241,11 +241,11 @@ class WeaponShops {
         level[] = { "life_coplevel", "SCALAR", 3, "You must be a Sergeant Rank!" };
         items[] = {
             { "srifle_EBR_DMS_pointer_snds_F", "", 300000, 225000 },
-            { "srifle_LRR_LRPS_F", "", 300000, 215000 },
-	    { "srifle_DMR_01_DMS_F", "", 300000, 215000 },
-	    { "srifle_GM6_F", "", 300000, 215000 },
-	    { "launch_Titan_F", "", 300000, 250000 },
-	    { "launch_B_Titan_short_F", "", 400000, 350000 }
+            { "srifle_LRR_LRPS_F", "", 400000, 215000 },
+	    { "srifle_DMR_01_F", "", 450000, 215000 },
+	    { "srifle_GM6_F", "", 600000, 215000 },
+	    { "launch_Titan_F", "", 700000, 250000 },
+	    { "launch_B_Titan_short_F", "", 800000, 350000 }
         };
         mags[] = {
             { "20Rnd_762x51_Mag", "", 60 },
@@ -253,9 +253,9 @@ class WeaponShops {
             { "10Rnd_762x51_Mag", "", 450 },
             { "5Rnd_127x108_Mag", "", 450 },
 	    { "5Rnd_127x108_APDS_Mag", "", 450 },
-            { "Titan_AA", "", 12450 },
-            { "Titan_AT", "", 12450 },
-            { "Titan_AP", "", 13450 }
+            { "Titan_AA", "", 10000 },
+            { "Titan_AT", "", 10000 },
+            { "Titan_AP", "", 10000 }
         };
         accs[] = {
             { "optic_SOS", "", 2500, 1000 },
